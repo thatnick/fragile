@@ -2,8 +2,14 @@
 
 extends RigidBody2D
 
+const PLAYER_BOUNCE = 0.1
 var in_nest = false
 var hatched = false
+onready var manager = get_node("/root/Manager")
+
+func _ready():
+	# add a random rotation
+	add_torque(manager.rng.randf_range(-50.0, 50.0))
 
 func _process(delta):
 	# hatch the egg immediately if it has stopped moving inside the nest
@@ -16,6 +22,9 @@ func _process(delta):
 func _on_Egg_body_entered(body):
 	if body.name == "Floor":
 		hit_floor()
+	if body.name == "Player":
+		# add an extra velocity boost when hitting the player
+		apply_central_impulse(Vector2(cos(rotation), sin(rotation)) * PLAYER_BOUNCE)
 
 # hatch the egg when the timer runs out (it starts on egg creation)
 func _on_HatchTimer_timeout():
