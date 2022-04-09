@@ -5,7 +5,7 @@
 
 [sub_resource type="Curve2D" id=1]
 _data = {
-"points": PoolVector2Array( 0, 0, 0, 0, 0, 64, 0, 0, 0, 0, 128, 72, 0, 0, 0, 0, 256, 64, 0, 0, 0, 0, 384, 72, 0, 0, 0, 0, 512, 64, 0, 0, 0, 0, 640, 72, 0, 0, 0, 0, 768, 64, 0, 0, 0, 0, 896, 72, 0, 0, 0, 0, 1024, 64 )
+"points": PoolVector2Array( 0, 0, 0, 0, 32, 64, 0, 0, 0, 0, 128, 72, 0, 0, 0, 0, 256, 64, 0, 0, 0, 0, 384, 72, 0, 0, 0, 0, 512, 64, 0, 0, 0, 0, 640, 72, 0, 0, 0, 0, 768, 64 )
 }
 
 [node name="EggGen" type="Path2D"]
@@ -17,4 +17,5 @@ position = Vector2( 0, 64 )
 rotation = 0.0624201
 
 [node name="Icon" type="Sprite" parent="Bird"]
+position = Vector2( 31.9377, -1.99615 )
 texture = ExtResource( 1 )
