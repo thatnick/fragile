@@ -1,12 +1,13 @@
 [gd_scene load_steps=3 format=2]
 
 [sub_resource type="PhysicsMaterial" id=2]
-bounce = 1.0
 
-[sub_resource type="CapsuleShape2D" id=3]
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 10, 308.5 )
 
-[node name="Egg" type="RigidBody2D"]
+[node name="Wall" type="StaticBody2D"]
 physics_material_override = SubResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource( 3 )
+position = Vector2( 0, 298.5 )
+shape = SubResource( 1 )
