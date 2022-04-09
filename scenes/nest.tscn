@@ -1,0 +1,31 @@
+[gd_scene load_steps=3 format=2]
+
+[sub_resource type="PhysicsMaterial" id=2]
+bounce = 0.5
+absorbent = true
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 5.0
+height = 75.0
+
+[node name="Nest" type="StaticBody2D"]
+collision_layer = 16
+collision_mask = 2
+physics_material_override = SubResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 66, 9 )
+rotation = 0.785398
+shape = SubResource( 1 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2( -1, 36 )
+rotation = 1.5708
+scale = Vector2( 1, 1 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
+position = Vector2( -66, 9 )
+rotation = 2.35619
+scale = Vector2( 1, 1 )
+shape = SubResource( 1 )
