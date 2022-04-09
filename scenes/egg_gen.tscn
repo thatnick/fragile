@@ -21,8 +21,8 @@ curve = SubResource( 1 )
 script = ExtResource( 2 )
 
 [node name="Bird" type="PathFollow2D" parent="."]
-position = Vector2( 0, 64 )
-rotation = 0.0624201
+position = Vector2( 32, 64 )
+rotation = 0.0831392
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Bird"]
 position = Vector2( 31.9377, -1.99615 )
