@@ -6,6 +6,8 @@
 extents = Vector2( 10, 308.5 )
 
 [node name="Wall" type="StaticBody2D"]
+collision_layer = 8
+collision_mask = 3
 physics_material_override = SubResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
