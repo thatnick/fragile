@@ -11,9 +11,9 @@ func _ready():
 	$Bird.set_loop(false)
 
 func _process(delta):
-	# move along the path
+	# move bird along the path
 	$Bird.offset += speed * delta
-	#reverse when reaching the end of the path
+	# reverse when reaching the end of the path
 	if ($Bird.unit_offset >= 1 || $Bird.unit_offset <= 0):
 		speed = -speed
 
