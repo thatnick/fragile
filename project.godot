@@ -11,11 +11,21 @@ config_version=4
 [application]
 
 config/name="fragile"
+run/main_scene="res://scenes/ali_sandbox.tscn"
 config/icon="res://icon.png"
 
 [autoload]
 
 Manager="*res://scripts/manager.gd"
+
+[debug]
+
+shapes/collision/shape_color=Color( 0, 0.6, 0.701961, 0.980392 )
+shapes/collision/contact_color=Color( 1, 0.2, 0.101961, 0.968627 )
+
+[display]
+
+window/size/width=800
 
 [physics]
 
