@@ -34,9 +34,11 @@ func _on_Egg_body_entered(body):
 
 # hatch the egg when the timer runs out (it starts on egg creation)
 func _on_HatchTimer_timeout():
-	hatch()
+	# Gameplay testing: Turned off eggs hatching in mid air
+	pass
+	#hatch()
 	# TODO play an animation instead of just deleting the egg
-	queue_free()
+	#queue_free()
 
 func hit_floor():
 	set_deferred("mode", MODE_STATIC)

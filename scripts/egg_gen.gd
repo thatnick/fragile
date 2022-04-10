@@ -28,7 +28,3 @@ func spawn_egg():
 	var egg = EGG.instance()
 	egg.position = $Bird.position
 	game_scene.add_child(egg)
-
-# Chang how frequently eggs are layed
-func change_spawn_interval(seconds):
-	$EggSpawnTimer.wait_time = seconds
