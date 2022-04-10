@@ -13,6 +13,7 @@ func _ready():
 	
 	# DEBUG Set options from the debug screen
 	$EggSpawnTimer.wait_time = manager.egg_interval
+	$EggSpawnTimer.start()
 
 func _process(delta):
 	# move bird along the path

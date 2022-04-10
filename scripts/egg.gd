@@ -34,7 +34,7 @@ func _on_Egg_body_entered(body):
 
 # hatch the egg when the timer runs out (it starts on egg creation)
 func _on_HatchTimer_timeout():
-	# Gameplay testing: Turned off eggs hatching in mid air
+	# GAMEPLAY TESTING: Turned off eggs hatching in mid air
 	pass
 	#hatch()
 	# TODO play an animation instead of just deleting the egg
@@ -48,7 +48,6 @@ func hit_floor():
 	#TODO change to the splat animation
 	
 func hatch():
-	print("An egg hatched!")
 	manager.score += SCORE_VALUE
 	hatched = true
 	
