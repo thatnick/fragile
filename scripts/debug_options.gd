@@ -4,6 +4,7 @@ extends CanvasLayer
 onready var manager = get_node("/root/Manager")
 
 func _ready():
+	# set the debug GUI control defaults from the manager
 	$GravityEdit.text = str(manager.gravity)
 	$VelDampEdit.text = str(manager.vel_damp)
 	$RotVelDampEdit.text = str(manager.rot_vel_damp)
@@ -14,6 +15,7 @@ func _ready():
 	
 
 func _on_StartGameButton_pressed():
+	# save the current debug values from the GUI controls into the manager
 	manager.gravity = float($GravityEdit.text)
 	manager.vel_damp = float($VelDampEdit.text)
 	manager.rot_vel_damp = float($RotVelDampEdit.text)
