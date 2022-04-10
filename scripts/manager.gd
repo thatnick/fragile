@@ -12,8 +12,8 @@ var lives
 var lives_total = 3 setget set_lives_total
 var gravity = 1
 var vel_damp = 0.025
-var rot_vel_damp = 0.1
-var egg_interval = 5
+var rot_vel_damp = 0.5
+var egg_interval = 3
 
 func _ready():
 	rng.randomize()

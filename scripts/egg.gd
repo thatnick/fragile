@@ -4,7 +4,7 @@ extends RigidBody2D
 
 const LIVES_LOST_VALUE: int = 1
 const PLAYER_BOUNCE = 0.1
-const SCORE_VALUE: int = 10
+const SCORE_VALUE: int = 1
 
 var in_nest = false
 var hatched = false
