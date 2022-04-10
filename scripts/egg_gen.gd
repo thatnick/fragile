@@ -4,11 +4,15 @@ const EGG = preload("res://scenes/egg.tscn")
 
 var speed = 250
 
+onready var manager = get_node("/root/Manager")
 onready var game_scene = get_node("/root/Game")
 
 func _ready():
 	# stop at the end of the path instead of looping back to the start
 	$Bird.set_loop(false)
+	
+	# DEBUG Set options from the debug screen
+	$EggSpawnTimer.wait_time = manager.egg_interval
 
 func _process(delta):
 	# move bird along the path

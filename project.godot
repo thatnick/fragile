@@ -21,7 +21,7 @@ _global_script_class_icons={
 [application]
 
 config/name="fragile"
-run/main_scene="res://scenes/game.tscn"
+run/main_scene="res://scenes/debug_options.tscn"
 config/icon="res://icon.png"
 
 [autoload]
