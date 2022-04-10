@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/chick.png-e2f1ab27490e0817e76e68c3fe029c34.stex"
+path="res://.import/chick_flap_2.png-e89c48d883a3e7cd130c6ec4a87ea1b5.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/chick.png"
-dest_files=[ "res://.import/chick.png-e2f1ab27490e0817e76e68c3fe029c34.stex" ]
+source_file="res://sprites/chick_flap_2.png"
+dest_files=[ "res://.import/chick_flap_2.png-e89c48d883a3e7cd130c6ec4a87ea1b5.stex" ]
 
 [params]
 

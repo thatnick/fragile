@@ -1,6 +1,7 @@
 class_name Egg
 extends RigidBody2D
 
+const CHICK = preload("res://scenes/chick.tscn")
 const LIVES_LOST_VALUE: int = 1
 const SCORE_VALUE: int = 1
 const HATCH_WAIT_TIME = 15
@@ -12,6 +13,7 @@ var splatted = false
 
 onready var previous_hatch_wait_time = $HatchTimer.wait_time
 onready var manager = get_node("/root/Manager")
+onready var game_scene = get_node("/root/Game")
 
 func _ready():
 	# DEBUG set debug options
@@ -53,13 +55,22 @@ func hit_floor():
 func hatch():
 	hatched = true
 	manager.score += SCORE_VALUE
-	$AnimatedSprite.animation = "chick"
-	# stop chick from moving
-	set_deferred("mode", MODE_STATIC)
-	# if egg hatches in mid air, disable collisions
-	if !in_nest:
+	$AnimatedSprite.animation = "hatched"
+	spawn_chick()
+	# stop chick from moving if it hatched in the nest
+	if in_nest:
+		set_deferred("mode", MODE_STATIC)
+	# but if egg hatches in mid air, disable collisions and let it fall to floor
+	# TODO reenable collisions but use layers so the shell hits the floor but
+	# not the paddle or anything else
+	else: 
 		$EggShapeTop.set_deferred("disabled", true)
 		$EggShapeBottom.set_deferred("disabled", true)
+
+func spawn_chick():
+	var chick = CHICK.instance()
+	chick.position = position
+	game_scene.add_child(chick)
 
 # this is set from the Nest scene
 func set_in_nest(new_value):
@@ -70,5 +81,6 @@ func set_in_nest(new_value):
 		previous_hatch_wait_time = $HatchTimer.time_left
 		$HatchTimer.start(NEST_HATCH_WAIT_TIME)
 	# the egg bounced out, set the timer back to what it was before the egg fell in the nest
+	# TODO don't think this is working right
 	elif !in_nest && !hatched:
 		$HatchTimer.start(previous_hatch_wait_time)

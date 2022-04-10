@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/splat.png-dd7aea9e9573f506378c042633eee8ce.stex"
+path="res://.import/egg_4.png-cc7d5ec296fe3c2e30982c069c9ebee9.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/splat.png"
-dest_files=[ "res://.import/splat.png-dd7aea9e9573f506378c042633eee8ce.stex" ]
+source_file="res://sprites/egg_4.png"
+dest_files=[ "res://.import/egg_4.png-cc7d5ec296fe3c2e30982c069c9ebee9.stex" ]
 
 [params]
 

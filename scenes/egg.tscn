@@ -2,7 +2,7 @@
 
 [ext_resource path="res://scripts/egg.gd" type="Script" id=1]
 [ext_resource path="res://sprites/egg_1.png" type="Texture" id=2]
-[ext_resource path="res://sprites/chick.png" type="Texture" id=3]
+[ext_resource path="res://sprites/egg_4.png" type="Texture" id=3]
 [ext_resource path="res://sprites/egg_2.png" type="Texture" id=4]
 [ext_resource path="res://sprites/egg_3.png" type="Texture" id=5]
 [ext_resource path="res://sprites/splat.png" type="Texture" id=6]
@@ -34,7 +34,7 @@ animations = [ {
 }, {
 "frames": [ ExtResource( 3 ) ],
 "loop": true,
-"name": "chick",
+"name": "hatched",
 "speed": 5.0
 } ]
 
