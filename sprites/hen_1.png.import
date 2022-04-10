@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/hen_flying_2.png-9563ca753eb598b50ba1351e4932b714.stex"
+path="res://.import/hen_1.png-6841188c871972fe2013455ea6d70898.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/hen_flying_2.png"
-dest_files=[ "res://.import/hen_flying_2.png-9563ca753eb598b50ba1351e4932b714.stex" ]
+source_file="res://sprites/hen_1.png"
+dest_files=[ "res://.import/hen_1.png-6841188c871972fe2013455ea6d70898.stex" ]
 
 [params]
 
