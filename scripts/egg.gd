@@ -2,8 +2,10 @@
 
 extends RigidBody2D
 
-const PLAYER_BOUNCE = 0.1
 const LIVES_LOST_VALUE: int = 1
+const PLAYER_BOUNCE = 0.1
+const SCORE_VALUE: int = 10
+
 var in_nest = false
 var hatched = false
 onready var manager = get_node("/root/Manager")
@@ -42,6 +44,7 @@ func hit_floor():
 	
 func hatch():
 	print("An egg hatched!")
+	manager.score += SCORE_VALUE
 	hatched = true
 	
 	
