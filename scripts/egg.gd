@@ -3,6 +3,7 @@
 extends RigidBody2D
 
 const PLAYER_BOUNCE = 0.1
+const LIVES_LOST_VALUE: int = 1
 var in_nest = false
 var hatched = false
 onready var manager = get_node("/root/Manager")
@@ -36,7 +37,8 @@ func hit_floor():
 	set_deferred("mode", MODE_STATIC)
 	$EggShapeTop.set_deferred("disabled", true)
 	$EggShapeBottom.set_deferred("disabled", true)
-	# TODO change to the splat animation
+	manager.lives -= LIVES_LOST_VALUE
+	#TODO change to the splat animation
 	
 func hatch():
 	print("An egg hatched!")
