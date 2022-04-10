@@ -5,8 +5,9 @@ extends RigidBody2D
 const LIVES_LOST_VALUE: int = 1
 const PLAYER_BOUNCE = 0.1
 const SCORE_VALUE: int = 1
+const HATCH_WAIT_TIME = 5
 
-var in_nest = false
+var in_nest = false setget set_in_nest
 var hatched = false
 
 onready var manager = get_node("/root/Manager")
@@ -21,12 +22,8 @@ func _ready():
 	angular_damp = manager.rot_vel_damp
 
 func _process(delta):
-	# hatch the egg immediately if it has stopped moving inside the nest
-	if in_nest && !hatched && sleeping:
-		$HatchTimer.stop()
-		# stop the egg from moving, must be set after current frames physics step
-		set_deferred("mode", MODE_STATIC)
-		hatch()
+	if !$HatchTimer.is_stopped():
+		print($HatchTimer.time_left)
 		
 func _on_Egg_body_entered(body):
 	if body.name == "Floor":
@@ -34,11 +31,7 @@ func _on_Egg_body_entered(body):
 
 # hatch the egg when the timer runs out (it starts on egg creation)
 func _on_HatchTimer_timeout():
-	# GAMEPLAY TESTING: Turned off eggs hatching in mid air
-	pass
-	#hatch()
-	# TODO play an animation instead of just deleting the egg
-	#queue_free()
+	hatch()
 
 func hit_floor():
 	set_deferred("mode", MODE_STATIC)
@@ -49,7 +42,14 @@ func hit_floor():
 	
 func hatch():
 	manager.score += SCORE_VALUE
+	set_deferred("mode", MODE_STATIC)
+	$EggShapeTop.set_deferred("disabled", true)
+	$EggShapeBottom.set_deferred("disabled", true)
 	hatched = true
 	
-	
-	
+func set_in_nest(new_value):
+	in_nest = new_value
+	if in_nest && !hatched && $HatchTimer.is_stopped():
+		$HatchTimer.start(HATCH_WAIT_TIME)
+	elif !in_nest:
+		$HatchTimer.stop()
