@@ -34,6 +34,8 @@ func _on_HatchTimer_timeout():
 
 func hit_floor():
 	set_deferred("mode", MODE_STATIC)
+	$EggShapeTop.set_deferred("disabled", true)
+	$EggShapeBottom.set_deferred("disabled", true)
 	# TODO change to the splat animation
 	
 func hatch():
