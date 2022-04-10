@@ -37,11 +37,11 @@ valign = 1
 [node name="EggOptions" type="Label" parent="."]
 anchor_left = 0.5
 anchor_right = 0.5
-margin_left = -64.0
+margin_left = -72.0
 margin_top = 200.0
 margin_right = 79.0
 margin_bottom = 224.0
-text = "EGG OPTIONS"
+text = "EGG PHYSICS OPTIONS"
 align = 1
 valign = 1
 
@@ -63,10 +63,10 @@ margin_top = 296.0
 margin_right = 474.0
 margin_bottom = 320.0
 
-[node name="EggIntervalEdit" type="LineEdit" parent="."]
+[node name="EggSpinCheckbox" type="CheckBox" parent="."]
 margin_left = 416.0
 margin_top = 328.0
-margin_right = 474.0
+margin_right = 440.0
 margin_bottom = 352.0
 
 [node name="Label" type="Label" parent="."]
@@ -93,12 +93,12 @@ margin_bottom = 320.0
 text = "Rotaitonal velocity dampening (0-100)"
 valign = 1
 
-[node name="Label4" type="Label" parent="."]
-margin_left = 248.0
+[node name="Label6" type="Label" parent="."]
+margin_left = 216.0
 margin_top = 328.0
-margin_right = 412.0
+margin_right = 410.0
 margin_bottom = 352.0
-text = "Egg lay interval (>=1 secs)"
+text = "Apply random spin when laid"
 valign = 1
 
 [node name="EggOptions2" type="Label" parent="."]
@@ -112,19 +112,47 @@ text = "GAMEPLAY OPTIONS"
 align = 1
 valign = 1
 
+[node name="Label4" type="Label" parent="."]
+margin_left = 248.0
+margin_top = 408.0
+margin_right = 412.0
+margin_bottom = 432.0
+text = "Egg lay interval (>=1 secs)"
+valign = 1
+
 [node name="Label5" type="Label" parent="."]
 margin_left = 344.0
-margin_top = 408.0
+margin_top = 440.0
 margin_right = 413.0
-margin_bottom = 432.0
+margin_bottom = 464.0
 text = "Lives (>=1)"
 valign = 1
 
-[node name="LivesEdit" type="LineEdit" parent="."]
+[node name="Label7" type="Label" parent="."]
+margin_left = 240.0
+margin_top = 472.0
+margin_right = 410.0
+margin_bottom = 496.0
+text = "Bird speed (pixels per sec)"
+valign = 1
+
+[node name="EggIntervalEdit" type="LineEdit" parent="."]
 margin_left = 416.0
 margin_top = 408.0
 margin_right = 474.0
 margin_bottom = 432.0
+
+[node name="LivesEdit" type="LineEdit" parent="."]
+margin_left = 416.0
+margin_top = 440.0
+margin_right = 474.0
+margin_bottom = 464.0
+
+[node name="BirdSpeedEdit" type="LineEdit" parent="."]
+margin_left = 416.0
+margin_top = 472.0
+margin_right = 474.0
+margin_bottom = 496.0
 
 [node name="StartGameButton" type="Button" parent="."]
 anchor_left = 0.5

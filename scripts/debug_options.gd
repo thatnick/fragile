@@ -7,14 +7,19 @@ func _ready():
 	$GravityEdit.text = str(manager.gravity)
 	$VelDampEdit.text = str(manager.vel_damp)
 	$RotVelDampEdit.text = str(manager.rot_vel_damp)
+	$EggSpinCheckbox.pressed = manager.egg_spin_on_start
 	$EggIntervalEdit.text = str(manager.egg_interval)
 	$LivesEdit.text = str(manager.lives_total)
+	$BirdSpeedEdit.text = str(manager.bird_speed)
+	
 
 func _on_StartGameButton_pressed():
 	manager.gravity = float($GravityEdit.text)
 	manager.vel_damp = float($VelDampEdit.text)
 	manager.rot_vel_damp = float($RotVelDampEdit.text)
+	manager.egg_spin_on_start = $EggSpinCheckbox.pressed
 	manager.egg_interval = int($EggIntervalEdit.text)
 	manager.lives_total = int($LivesEdit.text)
+	manager.bird_speed = float($BirdSpeedEdit.text)
 	
 	get_tree().change_scene("res://scenes/game.tscn")

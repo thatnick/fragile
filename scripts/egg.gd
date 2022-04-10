@@ -13,17 +13,13 @@ var hatched = false
 onready var manager = get_node("/root/Manager")
 
 func _ready():
-	# add a random rotation
-	add_torque(manager.rng.randf_range(-50.0, 50.0))
-	
-	# DEBUG Set options from the debug screen
+	# DEBUG set debug options
+	if manager.egg_spin_on_start:
+		# add a random rotation
+		add_torque(manager.rng.randf_range(-50.0, 50.0))
 	gravity_scale = manager.gravity
 	linear_damp = manager.vel_damp
 	angular_damp = manager.rot_vel_damp
-
-func _process(delta):
-	if !$HatchTimer.is_stopped():
-		print($HatchTimer.time_left)
 		
 func _on_Egg_body_entered(body):
 	if body.name == "Floor":

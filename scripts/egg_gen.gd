@@ -11,6 +11,8 @@ func _ready():
 	# stop at the end of the path instead of looping back to the start
 	$Bird.set_loop(false)
 	
+	speed = manager.bird_speed
+	
 	# DEBUG Set options from the debug screen
 	$EggSpawnTimer.wait_time = manager.egg_interval
 	$EggSpawnTimer.start()
