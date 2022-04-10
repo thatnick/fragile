@@ -23,6 +23,7 @@ func _process(delta):
 	# reverse when reaching the end of the path
 	if ($Bird.unit_offset >= 1 || $Bird.unit_offset <= 0):
 		speed = -speed
+		$Bird/AnimatedSprite.flip_h = !$Bird/AnimatedSprite.flip_h
 
 func _on_EggSpawnTimer_timeout():
 	spawn_egg()

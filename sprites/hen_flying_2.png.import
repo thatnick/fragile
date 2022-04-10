@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/barn_egg.png-7913cf0816fa8f2dc7d2cc3a48691d5d.stex"
+path="res://.import/hen_flying_2.png-9563ca753eb598b50ba1351e4932b714.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/barn_egg.png"
-dest_files=[ "res://.import/barn_egg.png-7913cf0816fa8f2dc7d2cc3a48691d5d.stex" ]
+source_file="res://sprites/hen_flying_2.png"
+dest_files=[ "res://.import/hen_flying_2.png-9563ca753eb598b50ba1351e4932b714.stex" ]
 
 [params]
 

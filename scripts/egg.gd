@@ -1,11 +1,10 @@
-#egg.gd
-
+class_name Egg
 extends RigidBody2D
 
 const LIVES_LOST_VALUE: int = 1
 const PLAYER_BOUNCE = 0.1
 const SCORE_VALUE: int = 1
-const HATCH_WAIT_TIME = 5
+const HATCH_WAIT_TIME = 3
 
 var in_nest = false setget set_in_nest
 var hatched = false
@@ -25,7 +24,7 @@ func _on_Egg_body_entered(body):
 	if body.name == "Floor":
 		hit_floor()
 
-# hatch the egg when the timer runs out (it starts on egg creation)
+# hatch the egg when the timer runs out
 func _on_HatchTimer_timeout():
 	hatch()
 
@@ -39,13 +38,11 @@ func hit_floor():
 func hatch():
 	manager.score += SCORE_VALUE
 	set_deferred("mode", MODE_STATIC)
-	$EggShapeTop.set_deferred("disabled", true)
-	$EggShapeBottom.set_deferred("disabled", true)
 	hatched = true
 	
 func set_in_nest(new_value):
 	in_nest = new_value
 	if in_nest && !hatched && $HatchTimer.is_stopped():
 		$HatchTimer.start(HATCH_WAIT_TIME)
-	elif !in_nest:
+	elif !in_nest && !hatched:
 		$HatchTimer.stop()
