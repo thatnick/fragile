@@ -7,3 +7,8 @@ func _process(delta):
 	position += velocity * delta
 	
 	# TODO queue free when left the screen
+
+
+func _on_VisibilityNotifier2D_screen_exited():
+	queue_free()
+	pass # Replace with function body.

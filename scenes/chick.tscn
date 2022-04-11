@@ -20,3 +20,9 @@ script = ExtResource( 4 )
 frames = SubResource( 1 )
 frame = 1
 playing = true
+
+[node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
+position = Vector2( 0.5, -8.34465e-07 )
+scale = Vector2( 1.65, 1.7 )
+
+[connection signal="screen_exited" from="VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_screen_exited"]
