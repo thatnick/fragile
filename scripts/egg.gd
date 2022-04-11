@@ -11,6 +11,9 @@ var in_nest = false setget set_in_nest
 var hatched = false
 var splatted = false
 
+onready var hatch_sfx = preload("res://sfx/hatch.wav")
+onready var splat_sfx = preload("res://sfx/splat.wav")
+
 onready var previous_hatch_wait_time = $HatchTimer.wait_time
 onready var manager = get_node("/root/Manager")
 onready var game_scene = get_node("/root/Game")
@@ -47,6 +50,8 @@ func hit_floor():
 	splatted = true
 	$HatchTimer.stop()
 	$AnimatedSprite.animation = "splat"
+	$Sfx.set_stream(splat_sfx)
+	$Sfx.play()
 	set_deferred("mode", MODE_STATIC)
 	$EggShapeTop.set_deferred("disabled", true)
 	$EggShapeBottom.set_deferred("disabled", true)
@@ -56,6 +61,8 @@ func hatch():
 	hatched = true
 	manager.score += SCORE_VALUE
 	$AnimatedSprite.animation = "hatched"
+	$Sfx.set_stream(hatch_sfx)
+	$Sfx.play()
 	spawn_chick()
 	# stop chick from moving if it hatched in the nest
 	if in_nest:

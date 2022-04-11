@@ -32,3 +32,4 @@ func spawn_egg():
 	var egg = EGG.instance()
 	egg.position = $Bird.position
 	game_scene.add_child(egg)
+	$Sfx.play()

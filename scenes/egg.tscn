@@ -17,9 +17,9 @@ animations = [ {
 "name": "default",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 5 ) ],
+"frames": [ ExtResource( 3 ) ],
 "loop": true,
-"name": "v_cracked",
+"name": "hatched",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 6 ) ],
@@ -27,14 +27,14 @@ animations = [ {
 "name": "splat",
 "speed": 5.0
 }, {
+"frames": [ ExtResource( 5 ) ],
+"loop": true,
+"name": "v_cracked",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 4 ) ],
 "loop": true,
 "name": "cracked",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 3 ) ],
-"loop": true,
-"name": "hatched",
 "speed": 5.0
 } ]
 
@@ -66,6 +66,8 @@ shape = SubResource( 3 )
 [node name="EggShapeBottom" type="CollisionShape2D" parent="."]
 position = Vector2( 0, 2 )
 shape = SubResource( 4 )
+
+[node name="Sfx" type="AudioStreamPlayer" parent="."]
 
 [connection signal="body_entered" from="." to="." method="_on_Egg_body_entered"]
 [connection signal="timeout" from="HatchTimer" to="." method="_on_HatchTimer_timeout"]
