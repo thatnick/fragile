@@ -19,16 +19,16 @@ script = ExtResource( 2 )
 position = Vector2( 0, 595 )
 
 [node name="Player" parent="." instance=ExtResource( 3 )]
-position = Vector2( 410, 473 )
+position = Vector2( 401, 545 )
 
 [node name="Wall" parent="." instance=ExtResource( 1 )]
-position = Vector2( 807, 0 )
+position = Vector2( 810, -1 )
 
 [node name="Wall2" parent="." instance=ExtResource( 1 )]
-position = Vector2( -6, 0 )
+position = Vector2( -10, 0 )
 
 [node name="Nest" parent="." instance=ExtResource( 5 )]
-position = Vector2( 658, 376 )
+position = Vector2( 703, 439 )
 
 [node name="EggGen" parent="." instance=ExtResource( 6 )]
 position = Vector2( 0, 77 )
@@ -36,3 +36,6 @@ position = Vector2( 0, 77 )
 [node name="HUD" parent="." instance=ExtResource( 7 )]
 
 [node name="Ceiling" parent="." instance=ExtResource( 8 )]
+
+[node name="Nest2" parent="." instance=ExtResource( 5 )]
+position = Vector2( 98, 445 )
