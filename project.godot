@@ -43,6 +43,10 @@ shapes/collision/contact_color=Color( 1, 0.2, 0.101961, 0.968627 )
 
 window/size/width=800
 
+[global]
+
+layer=false
+
 [layer_names]
 
 2d_physics/layer_1="player"
@@ -50,6 +54,7 @@ window/size/width=800
 2d_physics/layer_3="floor"
 2d_physics/layer_4="wall"
 2d_physics/layer_5="Nest"
+2d_physics/layer_6="ceiling"
 
 [physics]
 
