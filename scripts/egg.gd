@@ -37,14 +37,19 @@ func _process(delta):
 			$AnimatedSprite.animation = "v_cracked"
 		elif hatch_progress <= 0.5:
 			$AnimatedSprite.animation = "cracked"
-		
+
+
 func _on_Egg_body_entered(body):
-	if body.name == "Floor":
+	if body.name == "Floor" && !hatched:
 		hit_floor()
 
 # hatch the egg when the timer runs out
 func _on_HatchTimer_timeout():
 	hatch()
+
+func disable_collide():
+	$EggShapeTop.set_deferred("disabled", true)
+	$EggShapeBottom.set_deferred("disabled", true)
 
 func hit_floor():
 	splatted = true
@@ -52,9 +57,8 @@ func hit_floor():
 	$AnimatedSprite.animation = "splat"
 	$Sfx.set_stream(splat_sfx)
 	$Sfx.play()
-	set_deferred("mode", MODE_STATIC)
-	$EggShapeTop.set_deferred("disabled", true)
-	$EggShapeBottom.set_deferred("disabled", true)
+	disable_collide()
+	make_static()
 	manager.lives -= LIVES_LOST_VALUE
 	
 func hatch():
@@ -66,13 +70,16 @@ func hatch():
 	spawn_chick()
 	# stop chick from moving if it hatched in the nest
 	if in_nest:
-		set_deferred("mode", MODE_STATIC)
+		make_static()
+		disable_collide()
 	# but if egg hatches in mid air, disable collisions and let it fall to floor
 	# TODO reenable collisions but use layers so the shell hits the floor but
 	# not the paddle or anything else
 	else: 
-		$EggShapeTop.set_deferred("disabled", true)
-		$EggShapeBottom.set_deferred("disabled", true)
+		disable_collide()
+
+func make_static():
+	set_deferred("mode", MODE_STATIC)
 
 func spawn_chick():
 	var chick = CHICK.instance()
