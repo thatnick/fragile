@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://scenes/wall.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scripts/game.gd" type="Script" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://scenes/hud.tscn" type="PackedScene" id=7]
 [ext_resource path="res://scenes/ceiling.tscn" type="PackedScene" id=8]
 [ext_resource path="res://scenes/sky.tscn" type="PackedScene" id=9]
+[ext_resource path="res://scenes/static_cloud.tscn" type="PackedScene" id=10]
 
 [node name="Game" type="Node"]
 script = ExtResource( 2 )
@@ -39,3 +40,15 @@ position = Vector2( 0, 77 )
 
 [node name="Nest2" parent="." instance=ExtResource( 5 )]
 position = Vector2( 98, 445 )
+
+[node name="StaticCloud" parent="." instance=ExtResource( 10 )]
+position = Vector2( 51, 336 )
+
+[node name="StaticCloud2" parent="." instance=ExtResource( 10 )]
+position = Vector2( 473, 311 )
+
+[node name="StaticCloud3" parent="." instance=ExtResource( 10 )]
+position = Vector2( 87, 323 )
+
+[node name="StaticCloud4" parent="." instance=ExtResource( 10 )]
+position = Vector2( 314, 257 )
