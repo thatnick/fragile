@@ -1,4 +1,6 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://scripts/wall.gd" type="Script" id=1]
 
 [sub_resource type="PhysicsMaterial" id=2]
 
@@ -9,6 +11,7 @@ extents = Vector2( 10, 308.5 )
 collision_layer = 8
 collision_mask = 3
 physics_material_override = SubResource( 2 )
+script = ExtResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 0, 298.5 )
