@@ -56,6 +56,7 @@ layer=false
 2d_physics/layer_5="Nest"
 2d_physics/layer_6="ceiling"
 2d_physics/layer_7="cloud"
+2d_physics/layer_8="player_floor"
 
 [physics]
 

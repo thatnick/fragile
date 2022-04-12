@@ -1,16 +1,25 @@
 extends KinematicBody2D
 
-const SPEED = 25000
+const SPEED = 500
+const BOUNCE_SPEED = -750
+const GRAVITY = 5000
+
+var bouncing = false
 var velocity = Vector2()
 
 func get_input():
-	velocity = Vector2()
+	velocity.x = 0;
 	if Input.is_action_pressed("ui_right"):
-		velocity.x += 1
+		velocity.x += SPEED
 	if Input.is_action_pressed("ui_left"):
-		velocity.x -= 1
-	velocity = velocity.normalized() * SPEED
+		velocity.x -= SPEED
+	if Input.is_action_pressed("ui_accept") && is_on_floor():
+		bouncing = true
+		velocity.y = BOUNCE_SPEED
 
 func _physics_process(delta):
 	get_input()
-	move_and_slide(velocity * delta)
+	velocity.y += GRAVITY * delta
+	if bouncing and is_on_floor():
+		bouncing = false
+	velocity = move_and_slide(velocity, Vector2(0, -1))

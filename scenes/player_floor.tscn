@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=2]
+
+[sub_resource type="PhysicsMaterial" id=4]
+bounce = 1.0
+absorbent = true
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 411, 10 )
+
+[node name="PlayerFloor" type="StaticBody2D"]
+collision_layer = 128
+physics_material_override = SubResource( 4 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 401, 0 )
+shape = SubResource( 1 )
