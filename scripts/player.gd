@@ -16,6 +16,7 @@ func get_input():
 	if Input.is_action_pressed("ui_accept") && is_on_floor():
 		bouncing = true
 		velocity.y = BOUNCE_SPEED
+		$BounceSFX.play()
 
 func _physics_process(delta):
 	get_input()
