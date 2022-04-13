@@ -18,10 +18,16 @@ _global_script_classes=[ {
 "class": "HUD",
 "language": "GDScript",
 "path": "res://scripts/hud.gd"
+}, {
+"base": "Control",
+"class": "Start",
+"language": "GDScript",
+"path": "res://scripts/start.gd"
 } ]
 _global_script_class_icons={
 "Egg": "",
-"HUD": ""
+"HUD": "",
+"Start": ""
 }
 
 [application]

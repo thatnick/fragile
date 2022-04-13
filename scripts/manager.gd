@@ -34,3 +34,22 @@ func set_lives_total(new_value):
 func game_over():
 	lvl += 1
 	get_tree().change_scene("res://scenes/game_over.tscn")
+
+#TODO - function to progress to next level
+func next_level():
+	print("Next level method called!")
+
+#TODO - function to set up game to play from start
+func new_game():
+	#Set level to level 1
+	#load level 1
+	print("A new game was started!")
+
+#TODO - function to retry the existing level
+func retry():
+	print("Retry method was called!")
+
+#Function to return player to start screen
+func start_screen():
+	get_tree().change_scene("res://scenes/start.tscn")
+
