@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://scenes/wall.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scripts/game.gd" type="Script" id=2]
@@ -12,6 +12,7 @@
 [ext_resource path="res://scenes/static_cloud.tscn" type="PackedScene" id=10]
 [ext_resource path="res://scenes/dynamic_cloud.tscn" type="PackedScene" id=11]
 [ext_resource path="res://scenes/player_floor.tscn" type="PackedScene" id=12]
+[ext_resource path="res://scenes/balloon.tscn" type="PackedScene" id=13]
 
 [node name="Game" type="Node"]
 script = ExtResource( 2 )
@@ -44,19 +45,28 @@ position = Vector2( 0, 77 )
 position = Vector2( 98, 445 )
 
 [node name="StaticCloud" parent="." instance=ExtResource( 10 )]
-position = Vector2( 51, 336 )
+position = Vector2( 507, 353 )
 
 [node name="StaticCloud2" parent="." instance=ExtResource( 10 )]
-position = Vector2( 473, 311 )
+position = Vector2( 690, 216 )
 
 [node name="StaticCloud3" parent="." instance=ExtResource( 10 )]
-position = Vector2( 87, 323 )
+position = Vector2( 732, 187 )
 
 [node name="StaticCloud4" parent="." instance=ExtResource( 10 )]
-position = Vector2( 314, 257 )
+position = Vector2( 651, 233 )
 
 [node name="DynamicCloud" parent="." instance=ExtResource( 11 )]
-position = Vector2( 123, 224 )
+position = Vector2( 56, 288 )
 
 [node name="PlayerFloor" parent="." instance=ExtResource( 12 )]
 position = Vector2( 0, 565 )
+
+[node name="Balloon" parent="." instance=ExtResource( 13 )]
+position = Vector2( 94, 339 )
+
+[node name="Balloon2" parent="." instance=ExtResource( 13 )]
+position = Vector2( 46, 340 )
+
+[node name="Balloon3" parent="." instance=ExtResource( 13 )]
+position = Vector2( 145, 340 )
