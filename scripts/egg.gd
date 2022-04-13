@@ -10,6 +10,7 @@ const NEST_HATCH_WAIT_TIME = 3
 var in_nest = false setget set_in_nest
 var hatched = false
 var splatted = false
+var clamp_velocity = 500.0
 
 onready var hatch_sfx = preload("res://sfx/hatch.wav")
 onready var splat_sfx = preload("res://sfx/splat.wav")
@@ -26,6 +27,7 @@ func _ready():
 	gravity_scale = manager.gravity
 	linear_damp = manager.vel_damp
 	angular_damp = manager.rot_vel_damp
+	clamp_velocity = manager.clamp_egg_velocity
 	
 	$HatchTimer.start(HATCH_WAIT_TIME)
 
@@ -37,6 +39,12 @@ func _process(delta):
 			$AnimatedSprite.animation = "v_cracked"
 		elif hatch_progress <= 0.5:
 			$AnimatedSprite.animation = "cracked"
+			
+
+func _integrate_forces(state):
+	var velocity = state.get_linear_velocity()
+	if velocity.length() > clamp_velocity:
+		state.set_linear_velocity(velocity.clamped(clamp_velocity))
 
 
 func _on_Egg_body_entered(body):

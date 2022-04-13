@@ -10,6 +10,7 @@ var score: int = 0
 var lives
 
 # DEBUG these are overriden by any changes on the DebugOptions screen
+var clamp_egg_velocity = 500.0
 var gravity = 1
 var vel_damp = 0.025
 var rot_vel_damp = 0.5
