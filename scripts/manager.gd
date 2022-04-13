@@ -8,6 +8,7 @@ var rng = RandomNumberGenerator.new()
 
 var score: int = 0
 var lives
+var lvl = 1
 
 # DEBUG these are overriden by any changes on the DebugOptions screen
 var clamp_egg_velocity = 500.0
@@ -31,4 +32,5 @@ func set_lives_total(new_value):
 	lives = lives_total
 
 func game_over():
+	lvl += 1
 	get_tree().change_scene("res://scenes/game_over.tscn")
