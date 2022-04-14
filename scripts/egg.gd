@@ -17,7 +17,7 @@ onready var splat_sfx = preload("res://sfx/splat.wav")
 
 onready var previous_hatch_wait_time = $HatchTimer.wait_time
 onready var manager = get_node("/root/Manager")
-onready var game_scene = get_node("/root/Game")
+onready var game_scene = get_parent()
 
 func _ready():
 	# DEBUG set debug options

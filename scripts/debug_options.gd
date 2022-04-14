@@ -25,9 +25,6 @@ func _on_StartGameButton_pressed():
 	manager.egg_interval = int($EggIntervalEdit.text)
 	manager.lives_total = int($LivesEdit.text)
 	manager.bird_speed = float($BirdSpeedEdit.text)
-	
-	if manager.lvl % 3 == 0:
-		get_tree().change_scene("res://scenes/lvl03.tscn")
-	else:
-		get_tree().change_scene("res://scenes/lvl0" + str(manager.lvl % 3) + ".tscn")
+
+	manager.next_level()
 

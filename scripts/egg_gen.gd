@@ -5,7 +5,7 @@ const EGG = preload("res://scenes/egg.tscn")
 var speed = 250
 
 onready var manager = get_node("/root/Manager")
-onready var game_scene = get_node("/root/Game")
+onready var game_scene = get_parent()
 
 func _ready():
 	# stop at the end of the path instead of looping back to the start
