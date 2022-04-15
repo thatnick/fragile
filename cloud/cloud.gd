@@ -1,3 +1,4 @@
+class_name Cloud
 extends KinematicBody2D
 
 const SPEED = 50
