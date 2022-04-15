@@ -32,7 +32,6 @@ func next_level():
 
 func load_level(lvl_path):
 	get_tree().change_scene(lvl_path)
-	print(get_tree().current_scene)
 	
 	# DEBUG
 	override_level_lives()
