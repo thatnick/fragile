@@ -1,14 +1,13 @@
 extends CanvasLayer
 class_name HUD
 
-onready var manager: Node = get_node("/root/Manager")
-
 func _ready():
-	$ScoreNum.text = str(manager.score)
-	$LivesNum.text = str(manager.lives)
-	$LivesTotal.text = str(manager.lives_total)
+	$TotalLivesLabel.text = str(get_tree().current_scene.total_lives)
 	
-func _physics_process(delta):
-	$ScoreNum.text = str(manager.score)
-	$LivesNum.text = str(manager.lives)
+func _process(delta):
+	$CurrentScoreLabel.text = str(get_tree().current_scene.current_score)
+	$CurrentLivesLabel.text = str(get_tree().current_scene.current_lives)
+	
+	# DEBUG
+	$TotalLivesLabel.text = str(get_tree().current_scene.total_lives)
 
