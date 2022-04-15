@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/nest.png-1b481cb658c15a496ed6c4ae7fdaa5ea.stex"
+path="res://.import/nest_back.png-8980fa0cb9d89c8f92fb85a10956b953.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://nest/sprites/nest.png"
-dest_files=[ "res://.import/nest.png-1b481cb658c15a496ed6c4ae7fdaa5ea.stex" ]
+source_file="res://nest/sprites/nest_back.png"
+dest_files=[ "res://.import/nest_back.png-8980fa0cb9d89c8f92fb85a10956b953.stex" ]
 
 [params]
 
