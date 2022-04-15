@@ -20,17 +20,17 @@ onready var manager = get_node("/root/Manager")
 onready var game_scene = get_parent()
 
 func _ready():
+	# add a random rotation
+	add_torque(manager.rng.randf_range(-50.0, 50.0))
+	
+	$HatchTimer.start(HATCH_WAIT_TIME)
+	
 	# DEBUG set debug options
-	if manager.egg_spin_on_start:
-		# add a random rotation
-		add_torque(manager.rng.randf_range(-50.0, 50.0))
 	gravity_scale = manager.gravity
 	angular_damp = manager.rot_vel_damp
 	clamp_velocity = manager.clamp_egg_velocity
 	if !manager.eggs_collide:
 		set_collision_mask(0)
-	
-	$HatchTimer.start(HATCH_WAIT_TIME)
 
 func _process(_delta):
 	if !hatched && !splatted:

@@ -9,7 +9,6 @@ func _ready():
 	$GravityEdit.text = str(manager.gravity)
 	$FogLinearDamp.text = str(manager.fog_linear_damp)
 	$RotVelDampEdit.text = str(manager.rot_vel_damp)
-	$EggSpinCheckbox.pressed = manager.egg_spin_on_start
 	$ClampEggVelocity.text = str(manager.clamp_egg_velocity)
 	$EggsCollide.pressed = manager.eggs_collide
 	
@@ -26,7 +25,6 @@ func _on_StartGameButton_pressed():
 	manager.gravity = float($GravityEdit.text)
 	manager.fog_linear_damp = float($FogLinearDamp.text)
 	manager.rot_vel_damp = float($RotVelDampEdit.text)
-	manager.egg_spin_on_start = $EggSpinCheckbox.pressed
 	manager.clamp_egg_velocity = float($ClampEggVelocity.text)
 	manager.eggs_collide = $EggsCollide.pressed
 	manager.egg_interval = int($EggIntervalEdit.text)

@@ -18,7 +18,6 @@ var fog_linear_damp = 2.0
 var gravity = 1
 var rot_vel_damp = 0.5
 var eggs_collide = false
-var egg_spin_on_start = true
 var egg_interval = 3
 var lives_total = 3
 var bird_speed = 250

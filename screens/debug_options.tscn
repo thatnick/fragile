@@ -63,17 +63,11 @@ margin_top = 228.0
 margin_right = 491.0
 margin_bottom = 252.0
 
-[node name="EggSpinCheckbox" type="CheckBox" parent="."]
-margin_left = 433.0
-margin_top = 260.0
-margin_right = 457.0
-margin_bottom = 284.0
-
 [node name="EggsCollide" type="CheckBox" parent="."]
-margin_left = 431.0
-margin_top = 330.0
-margin_right = 455.0
-margin_bottom = 354.0
+margin_left = 436.0
+margin_top = 288.0
+margin_right = 460.0
+margin_bottom = 312.0
 
 [node name="Label" type="Label" parent="."]
 margin_left = 337.0
@@ -92,16 +86,16 @@ text = "Fog linear damping level (0.0 - 100)"
 valign = 1
 
 [node name="ClampEggVelocity" type="LineEdit" parent="."]
-margin_left = 428.0
-margin_top = 291.0
-margin_right = 486.0
-margin_bottom = 315.0
+margin_left = 436.0
+margin_top = 257.0
+margin_right = 494.0
+margin_bottom = 281.0
 
 [node name="Label8" type="Label" parent="."]
-margin_left = 254.0
-margin_top = 290.0
-margin_right = 416.0
-margin_bottom = 314.0
+margin_left = 264.0
+margin_top = 257.0
+margin_right = 426.0
+margin_bottom = 281.0
 text = "Max egg velocity ( >=1.0 )"
 valign = 1
 
@@ -113,19 +107,11 @@ margin_bottom = 252.0
 text = "Rotaitonal velocity dampening (0-100)"
 valign = 1
 
-[node name="Label6" type="Label" parent="."]
-margin_left = 233.0
-margin_top = 260.0
-margin_right = 427.0
-margin_bottom = 284.0
-text = "Apply random spin when laid"
-valign = 1
-
 [node name="Label10" type="Label" parent="."]
-margin_left = 221.0
-margin_top = 332.0
-margin_right = 425.0
-margin_bottom = 356.0
+margin_left = 224.0
+margin_top = 288.0
+margin_right = 428.0
+margin_bottom = 312.0
 text = "Eggs can collide with each other"
 valign = 1
 
