@@ -14,8 +14,8 @@ func _ready():
 	$LivesEdit.text = str(manager.lives_total)
 	$BirdSpeedEdit.text = str(manager.bird_speed)
 	
-	for level_path in manager.level_paths:
-		$LvlOptionButton.add_item(level_path)
+	for level_file_path in manager.level_file_paths:
+		$LvlOptionButton.add_item(level_file_path)
 	
 
 func _on_StartGameButton_pressed():

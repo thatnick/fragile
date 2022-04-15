@@ -56,7 +56,7 @@ margin_bottom = 39.0
 custom_fonts/font = SubResource( 4 )
 text = "Score:"
 
-[node name="ScoreNum" type="Label" parent="."]
+[node name="CurrentScoreLabel" type="Label" parent="."]
 margin_left = 120.0
 margin_top = 19.0
 margin_right = 177.0
@@ -79,7 +79,7 @@ margin_bottom = 36.0
 custom_fonts/font = SubResource( 6 )
 text = "Lives:"
 
-[node name="LivesNum" type="Label" parent="."]
+[node name="CurrentLivesLabel" type="Label" parent="."]
 margin_left = 650.0
 margin_top = 20.0
 margin_right = 670.0
@@ -95,7 +95,7 @@ margin_bottom = 36.0
 custom_fonts/font = SubResource( 8 )
 text = "/"
 
-[node name="LivesTotal" type="Label" parent="."]
+[node name="TotalLivesLabel" type="Label" parent="."]
 margin_left = 712.0
 margin_top = 19.0
 margin_right = 731.0
