@@ -15,7 +15,6 @@ physics_material_override = SubResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )
-one_way_collision = true
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( -1, 1 )

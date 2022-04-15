@@ -25,7 +25,7 @@ position = Vector2( 259, 335 )
 position = Vector2( 572, 336 )
 
 [node name="DynamicCloud" parent="." instance=ExtResource( 1 )]
-position = Vector2( 54, 188 )
+position = Vector2( 403, 191 )
 
 [node name="Balloon" parent="." instance=ExtResource( 4 )]
 position = Vector2( 411, 275 )

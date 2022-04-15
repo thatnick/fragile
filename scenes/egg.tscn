@@ -22,11 +22,6 @@ animations = [ {
 "name": "hatched",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 5 ) ],
-"loop": true,
-"name": "v_cracked",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 6 ) ],
 "loop": true,
 "name": "splat",
@@ -35,6 +30,11 @@ animations = [ {
 "frames": [ ExtResource( 4 ) ],
 "loop": true,
 "name": "cracked",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 5 ) ],
+"loop": true,
+"name": "v_cracked",
 "speed": 5.0
 } ]
 
@@ -46,7 +46,7 @@ radius = 13.0
 
 [node name="Egg" type="RigidBody2D"]
 collision_layer = 2
-collision_mask = 15
+collision_mask = 2
 physics_material_override = SubResource( 2 )
 contacts_reported = 1
 contact_monitor = true
