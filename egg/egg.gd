@@ -56,6 +56,9 @@ func _on_Egg_body_entered(body):
 func _on_HatchTimer_timeout():
 	hatch()
 
+func _on_DeleteShellTimer_timeout():
+	queue_free()
+
 func disable_collide():
 	$EggShapeTop.set_deferred("disabled", true)
 	$EggShapeBottom.set_deferred("disabled", true)
@@ -87,8 +90,7 @@ func hatch():
 	# not the paddle or anything else
 	else: 
 		disable_collide()
-	yield(get_tree().create_timer(0.25), "timeout")	
-	queue_free()
+	$DeleteShellTimer.start()
 
 func make_static():
 	set_deferred("mode", MODE_STATIC)
@@ -110,3 +112,6 @@ func set_in_nest(new_value):
 	# TODO don't think this is working right
 	elif !in_nest && !hatched:
 		$HatchTimer.start(previous_hatch_wait_time)
+
+
+
