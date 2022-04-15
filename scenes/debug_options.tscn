@@ -150,6 +150,14 @@ margin_bottom = 496.0
 text = "Bird speed (pixels per sec)"
 valign = 1
 
+[node name="Label9" type="Label" parent="."]
+margin_left = 176.0
+margin_top = 520.0
+margin_right = 256.0
+margin_bottom = 544.0
+text = "Select level"
+valign = 1
+
 [node name="EggIntervalEdit" type="LineEdit" parent="."]
 margin_left = 416.0
 margin_top = 408.0
@@ -168,14 +176,20 @@ margin_top = 472.0
 margin_right = 474.0
 margin_bottom = 496.0
 
+[node name="LvlOptionButton" type="OptionButton" parent="."]
+margin_left = 176.0
+margin_top = 552.0
+margin_right = 412.0
+margin_bottom = 572.0
+
 [node name="StartGameButton" type="Button" parent="."]
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-margin_left = -40.0
+margin_left = 16.0
 margin_top = -48.0
-margin_right = 40.0
+margin_right = 96.0
 margin_bottom = -28.0
 text = "Start game"
 

@@ -40,8 +40,10 @@ func game_over():
 
 #TODO - function to progress to next level
 func next_level():
-	print(level_paths[lvl - 1])
-	get_tree().change_scene(level_paths[lvl - 1])
+	load_level(level_paths[lvl - 1])
+
+func load_level(lvl_path):
+	get_tree().change_scene(lvl_path)
 
 #TODO - function to set up game to play from start
 func new_game():
