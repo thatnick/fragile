@@ -49,9 +49,10 @@ func _integrate_forces(state):
 
 
 func _on_Egg_body_entered(body):
-	if body.name == "Floor" && !hatched:
+	if body is Floor && !hatched:
 		hit_floor()
-
+	elif body is Nest:
+		hatch()
 # hatch the egg when the timer runs out
 func _on_HatchTimer_timeout():
 	hatch()

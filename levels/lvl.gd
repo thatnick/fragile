@@ -17,7 +17,8 @@ func _process(_delta):
 	if current_lives <= 0:
 		manager.game_over()
 	if current_score >= target_score:
-		manager.next_level()
+		manager.lvl += 1
+		get_tree().change_scene("res://screens/next_level.tscn")
 	
 	# DEBUG
 	if Input.is_action_pressed("ui_cancel"):
