@@ -16,6 +16,8 @@ func _ready():
 func _process(_delta):
 	if current_lives <= 0:
 		manager.game_over()
+	if current_score >= target_score:
+		manager.next_level()
 	
 	# DEBUG
 	if Input.is_action_pressed("ui_cancel"):

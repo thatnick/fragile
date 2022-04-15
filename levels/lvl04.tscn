@@ -4,9 +4,9 @@
 [ext_resource path="res://fog/fog_cloud.tscn" type="PackedScene" id=2]
 [ext_resource path="res://nest/nest.tscn" type="PackedScene" id=3]
 [ext_resource path="res://fog/fog.tscn" type="PackedScene" id=4]
-[ext_resource path="res://levels/lvl03.gd" type="Script" id=5]
+[ext_resource path="res://levels/lvl04.gd" type="Script" id=5]
 
-[node name="Lvl03" type="Node"]
+[node name="Lvl04" type="Node"]
 script = ExtResource( 5 )
 
 [node name="Game" parent="." instance=ExtResource( 1 )]
