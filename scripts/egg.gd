@@ -28,6 +28,8 @@ func _ready():
 	linear_damp = manager.vel_damp
 	angular_damp = manager.rot_vel_damp
 	clamp_velocity = manager.clamp_egg_velocity
+	if !manager.eggs_collide:
+		set_collision_mask(0)
 	
 	$HatchTimer.start(HATCH_WAIT_TIME)
 

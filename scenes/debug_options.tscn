@@ -69,6 +69,12 @@ margin_top = 260.0
 margin_right = 457.0
 margin_bottom = 284.0
 
+[node name="EggsCollide" type="CheckBox" parent="."]
+margin_left = 431.0
+margin_top = 330.0
+margin_right = 455.0
+margin_bottom = 354.0
+
 [node name="Label" type="Label" parent="."]
 margin_left = 337.0
 margin_top = 164.0
@@ -113,6 +119,14 @@ margin_top = 260.0
 margin_right = 427.0
 margin_bottom = 284.0
 text = "Apply random spin when laid"
+valign = 1
+
+[node name="Label10" type="Label" parent="."]
+margin_left = 221.0
+margin_top = 332.0
+margin_right = 425.0
+margin_bottom = 356.0
+text = "Eggs can collide with each other"
 valign = 1
 
 [node name="EggOptions2" type="Label" parent="."]
