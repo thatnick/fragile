@@ -1,4 +1,4 @@
-extends Area2D
+extends KinematicBody2D
 
 const SPEED = 50
 
@@ -13,14 +13,12 @@ enum Dir {LEFT = -1, RIGHT = 1}
 export(Dir) var initial_dir = Dir.LEFT
 
 func _ready():
-	set_linear_damp(manager.fog_linear_damp)
 	if mode == Mode.MOVING:
 		direction.x = initial_dir
 
 func _physics_process(delta):
 	if mode == Mode.MOVING:
-		position.x += direction.x * SPEED * delta
-
-func _on_Fog_body_entered(body):
-	if body is Wall:
-		direction.x = -direction.x
+		var collision = move_and_collide(direction * SPEED * delta)
+		if collision:
+			if collision.collider is Wall:
+				direction.x = -direction.x
