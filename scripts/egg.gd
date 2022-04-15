@@ -67,6 +67,7 @@ func hit_floor():
 	$Sfx.play()
 	disable_collide()
 	make_static()
+	rotation_degrees = 0
 	manager.lives -= LIVES_LOST_VALUE
 	
 func hatch():
