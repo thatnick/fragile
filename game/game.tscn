@@ -6,7 +6,7 @@
 [ext_resource path="res://egg_gen/egg_gen.tscn" type="PackedScene" id=6]
 [ext_resource path="res://game/hud.tscn" type="PackedScene" id=7]
 [ext_resource path="res://game/ceiling.tscn" type="PackedScene" id=8]
-[ext_resource path="res://game/sky.tscn" type="PackedScene" id=9]
+[ext_resource path="res://game/background.tscn" type="PackedScene" id=9]
 [ext_resource path="res://game/player_floor.tscn" type="PackedScene" id=12]
 
 [node name="Game" type="Node"]
