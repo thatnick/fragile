@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://scenes/fog_cloud.tscn" type="PackedScene" id=1]
+
+[node name="Fog" type="Area2D"]
+collision_layer = 64
+collision_mask = 2
+space_override = 3
+linear_damp = 2.0
+
+[node name="FogCloud" parent="." instance=ExtResource( 1 )]
