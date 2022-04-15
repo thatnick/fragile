@@ -86,6 +86,8 @@ func hatch():
 	# not the paddle or anything else
 	else: 
 		disable_collide()
+	yield(get_tree().create_timer(0.25), "timeout")	
+	queue_free()
 
 func make_static():
 	set_deferred("mode", MODE_STATIC)
