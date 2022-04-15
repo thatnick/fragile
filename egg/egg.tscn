@@ -56,6 +56,9 @@ script = ExtResource( 1 )
 wait_time = 30.0
 one_shot = true
 
+[node name="DeleteShellTimer" type="Timer" parent="."]
+one_shot = true
+
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 5 )
 
@@ -71,3 +74,4 @@ shape = SubResource( 4 )
 
 [connection signal="body_entered" from="." to="." method="_on_Egg_body_entered"]
 [connection signal="timeout" from="HatchTimer" to="." method="_on_HatchTimer_timeout"]
+[connection signal="timeout" from="DeleteShellTimer" to="." method="_on_DeleteShellTimer_timeout"]

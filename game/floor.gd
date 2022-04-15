@@ -1,2 +1,2 @@
-class_name Nest
+class_name Floor
 extends StaticBody2D
