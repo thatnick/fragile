@@ -13,7 +13,7 @@ const LEVELS_FOLDER = "res://levels/"
 var level_file_paths = []
 
 # DEBUG these are overriden by any changes on the DebugOptions screen
-var clamp_egg_velocity = 500.0
+var clamp_egg_velocity = 400.0
 var fog_linear_damp = 2.0
 var gravity = 1
 var rot_vel_damp = 0.5
