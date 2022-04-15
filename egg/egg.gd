@@ -69,7 +69,7 @@ func hit_floor():
 	disable_collide()
 	make_static()
 	rotation_degrees = 0
-	get_tree().current_scene.current_lives - LIVES_LOST_VALUE
+	get_tree().current_scene.current_lives -= LIVES_LOST_VALUE
 	
 func hatch():
 	hatched = true
