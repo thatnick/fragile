@@ -32,7 +32,7 @@ func _ready():
 	
 	$HatchTimer.start(HATCH_WAIT_TIME)
 
-func _process(delta):
+func _process(_delta):
 	if !hatched && !splatted:
 		# change the hatching animation based on how long is left on timer
 		var hatch_progress = $HatchTimer.time_left / $HatchTimer.wait_time

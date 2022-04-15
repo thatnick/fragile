@@ -13,7 +13,7 @@ func _ready():
 	current_lives = total_lives
 	manager.level_running = true
 
-func _process(delta):
+func _process(_delta):
 	if current_lives <= 0:
 		manager.game_over()
 	
