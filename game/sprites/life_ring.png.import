@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/lifering.png-56be6a9970c496abb23246a8e8840460.stex"
+path="res://.import/life_ring.png-1d96958f3010de9e532f9141b1b8ad25.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://game/sprites/lifering.png"
-dest_files=[ "res://.import/lifering.png-56be6a9970c496abb23246a8e8840460.stex" ]
+source_file="res://game/sprites/life_ring.png"
+dest_files=[ "res://.import/life_ring.png-1d96958f3010de9e532f9141b1b8ad25.stex" ]
 
 [params]
 
