@@ -25,7 +25,6 @@ func _ready():
 		# add a random rotation
 		add_torque(manager.rng.randf_range(-50.0, 50.0))
 	gravity_scale = manager.gravity
-	linear_damp = manager.vel_damp
 	angular_damp = manager.rot_vel_damp
 	clamp_velocity = manager.clamp_egg_velocity
 	if !manager.eggs_collide:

@@ -51,10 +51,10 @@ margin_top = 164.0
 margin_right = 491.0
 margin_bottom = 188.0
 
-[node name="VelDampEdit" type="LineEdit" parent="."]
-margin_left = 433.0
+[node name="FogLinearDamp" type="LineEdit" parent="."]
+margin_left = 436.0
 margin_top = 196.0
-margin_right = 491.0
+margin_right = 494.0
 margin_bottom = 220.0
 
 [node name="RotVelDampEdit" type="LineEdit" parent="."]
@@ -83,6 +83,14 @@ margin_bottom = 188.0
 text = "Gravity (0-128)"
 valign = 1
 
+[node name="Label2" type="Label" parent="."]
+margin_left = 203.0
+margin_top = 193.0
+margin_right = 428.0
+margin_bottom = 217.0
+text = "Fog linear damping level (0.0 - 100)"
+valign = 1
+
 [node name="ClampEggVelocity" type="LineEdit" parent="."]
 margin_left = 428.0
 margin_top = 291.0
@@ -95,14 +103,6 @@ margin_top = 290.0
 margin_right = 416.0
 margin_bottom = 314.0
 text = "Max egg velocity ( >=1.0 )"
-valign = 1
-
-[node name="Label2" type="Label" parent="."]
-margin_left = 257.0
-margin_top = 196.0
-margin_right = 432.0
-margin_bottom = 220.0
-text = "Velocity dampening (0-100)"
 valign = 1
 
 [node name="Label3" type="Label" parent="."]

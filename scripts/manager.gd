@@ -14,8 +14,8 @@ var level_file_paths = []
 
 # DEBUG these are overriden by any changes on the DebugOptions screen
 var clamp_egg_velocity = 500.0
+var fog_linear_damp = 2.0
 var gravity = 1
-var vel_damp = 0.025
 var rot_vel_damp = 0.5
 var eggs_collide = true
 var egg_spin_on_start = true
