@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://game/wall.tscn" type="PackedScene" id=1]
+[ext_resource path="res://game/floor.tscn" type="PackedScene" id=2]
+[ext_resource path="res://fog/fog.tscn" type="PackedScene" id=3]
+[ext_resource path="res://egg/egg.tscn" type="PackedScene" id=4]
+
+[node name="AliSandbox" type="Node"]
+
+[node name="Egg" parent="." instance=ExtResource( 4 )]
+position = Vector2( 158, 40 )
+
+[node name="Floor" parent="." instance=ExtResource( 2 )]
+position = Vector2( 0, 595 )
+
+[node name="Wall" parent="." instance=ExtResource( 1 )]
+position = Vector2( 807, 0 )
+
+[node name="Wall2" parent="." instance=ExtResource( 1 )]
+position = Vector2( -6, 0 )
+
+[node name="Egg2" parent="." instance=ExtResource( 4 )]
+position = Vector2( 424, 34 )
+
+[node name="Fog" parent="." instance=ExtResource( 3 )]
+position = Vector2( 168, 166 )

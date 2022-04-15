@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/hatch.wav-e267ee1467c1ff5fc1c0c1cae0484c39.sample"
+
+[deps]
+
+source_file="res://egg/sfx/hatch.wav"
+dest_files=[ "res://.import/hatch.wav-e267ee1467c1ff5fc1c0c1cae0484c39.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

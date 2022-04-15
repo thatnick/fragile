@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/egg_gen.wav-e5482d2076a56c94ab1989b92d70b1bd.sample"
+
+[deps]
+
+source_file="res://egg_gen/sfx/egg_gen.wav"
+dest_files=[ "res://.import/egg_gen.wav-e5482d2076a56c94ab1989b92d70b1bd.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

@@ -1,0 +1,210 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://game/debug_options.gd" type="Script" id=1]
+
+[node name="DebugOptions" type="CanvasLayer"]
+script = ExtResource( 1 )
+
+[node name="Title" type="Label" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -68.0
+margin_top = 84.0
+margin_right = 75.0
+margin_bottom = 108.0
+text = "Codename: Egg Tosser"
+align = 1
+valign = 1
+
+[node name="Title2" type="Label" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = 136.0
+margin_top = 232.0
+margin_right = 321.0
+margin_bottom = 365.0
+text = "NOTE: Options won't
+be saved when the game
+is closed, but will persist
+if you restart after game over
+
+Press ESC to end the game
+and return to this screen
+at any time"
+align = 1
+valign = 1
+
+[node name="EggOptions" type="Label" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -55.0
+margin_top = 132.0
+margin_right = 96.0
+margin_bottom = 156.0
+text = "EGG PHYSICS OPTIONS"
+align = 1
+valign = 1
+
+[node name="GravityEdit" type="LineEdit" parent="."]
+margin_left = 433.0
+margin_top = 164.0
+margin_right = 491.0
+margin_bottom = 188.0
+
+[node name="FogLinearDamp" type="LineEdit" parent="."]
+margin_left = 436.0
+margin_top = 196.0
+margin_right = 494.0
+margin_bottom = 220.0
+
+[node name="RotVelDampEdit" type="LineEdit" parent="."]
+margin_left = 433.0
+margin_top = 228.0
+margin_right = 491.0
+margin_bottom = 252.0
+
+[node name="EggSpinCheckbox" type="CheckBox" parent="."]
+margin_left = 433.0
+margin_top = 260.0
+margin_right = 457.0
+margin_bottom = 284.0
+
+[node name="EggsCollide" type="CheckBox" parent="."]
+margin_left = 431.0
+margin_top = 330.0
+margin_right = 455.0
+margin_bottom = 354.0
+
+[node name="Label" type="Label" parent="."]
+margin_left = 337.0
+margin_top = 164.0
+margin_right = 433.0
+margin_bottom = 188.0
+text = "Gravity (0-128)"
+valign = 1
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 203.0
+margin_top = 193.0
+margin_right = 428.0
+margin_bottom = 217.0
+text = "Fog linear damping level (0.0 - 100)"
+valign = 1
+
+[node name="ClampEggVelocity" type="LineEdit" parent="."]
+margin_left = 428.0
+margin_top = 291.0
+margin_right = 486.0
+margin_bottom = 315.0
+
+[node name="Label8" type="Label" parent="."]
+margin_left = 254.0
+margin_top = 290.0
+margin_right = 416.0
+margin_bottom = 314.0
+text = "Max egg velocity ( >=1.0 )"
+valign = 1
+
+[node name="Label3" type="Label" parent="."]
+margin_left = 185.0
+margin_top = 228.0
+margin_right = 427.0
+margin_bottom = 252.0
+text = "Rotaitonal velocity dampening (0-100)"
+valign = 1
+
+[node name="Label6" type="Label" parent="."]
+margin_left = 233.0
+margin_top = 260.0
+margin_right = 427.0
+margin_bottom = 284.0
+text = "Apply random spin when laid"
+valign = 1
+
+[node name="Label10" type="Label" parent="."]
+margin_left = 221.0
+margin_top = 332.0
+margin_right = 425.0
+margin_bottom = 356.0
+text = "Eggs can collide with each other"
+valign = 1
+
+[node name="EggOptions2" type="Label" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -64.0
+margin_top = 384.0
+margin_right = 79.0
+margin_bottom = 408.0
+text = "GAMEPLAY OPTIONS"
+align = 1
+valign = 1
+
+[node name="Label4" type="Label" parent="."]
+margin_left = 248.0
+margin_top = 408.0
+margin_right = 412.0
+margin_bottom = 432.0
+text = "Egg lay interval (>=1 secs)"
+valign = 1
+
+[node name="Label5" type="Label" parent="."]
+margin_left = 344.0
+margin_top = 440.0
+margin_right = 413.0
+margin_bottom = 464.0
+text = "Lives (>=1)"
+valign = 1
+
+[node name="Label7" type="Label" parent="."]
+margin_left = 240.0
+margin_top = 472.0
+margin_right = 410.0
+margin_bottom = 496.0
+text = "Bird speed (pixels per sec)"
+valign = 1
+
+[node name="Label9" type="Label" parent="."]
+margin_left = 176.0
+margin_top = 520.0
+margin_right = 256.0
+margin_bottom = 544.0
+text = "Select level"
+valign = 1
+
+[node name="EggIntervalEdit" type="LineEdit" parent="."]
+margin_left = 416.0
+margin_top = 408.0
+margin_right = 474.0
+margin_bottom = 432.0
+
+[node name="LivesEdit" type="LineEdit" parent="."]
+margin_left = 416.0
+margin_top = 440.0
+margin_right = 474.0
+margin_bottom = 464.0
+
+[node name="BirdSpeedEdit" type="LineEdit" parent="."]
+margin_left = 416.0
+margin_top = 472.0
+margin_right = 474.0
+margin_bottom = 496.0
+
+[node name="LvlOptionButton" type="OptionButton" parent="."]
+margin_left = 176.0
+margin_top = 552.0
+margin_right = 412.0
+margin_bottom = 572.0
+
+[node name="StartGameButton" type="Button" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = 16.0
+margin_top = -48.0
+margin_right = 96.0
+margin_bottom = -28.0
+text = "Start game"
+
+[connection signal="pressed" from="StartGameButton" to="." method="_on_StartGameButton_pressed"]
