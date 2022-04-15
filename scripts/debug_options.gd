@@ -7,7 +7,7 @@ func _ready():
 	# set the debug GUI control defaults from the manager
 	# egg physics options
 	$GravityEdit.text = str(manager.gravity)
-	$VelDampEdit.text = str(manager.vel_damp)
+	$FogLinearDamp.text = str(manager.fog_linear_damp)
 	$RotVelDampEdit.text = str(manager.rot_vel_damp)
 	$EggSpinCheckbox.pressed = manager.egg_spin_on_start
 	$ClampEggVelocity.text = str(manager.clamp_egg_velocity)
@@ -25,7 +25,7 @@ func _ready():
 func _on_StartGameButton_pressed():
 	# save the current debug values from the GUI controls into the manager
 	manager.gravity = float($GravityEdit.text)
-	manager.vel_damp = float($VelDampEdit.text)
+	manager.fog_linear_damp = float($FogLinearDamp.text)
 	manager.rot_vel_damp = float($RotVelDampEdit.text)
 	manager.egg_spin_on_start = $EggSpinCheckbox.pressed
 	manager.clamp_egg_velocity = float($ClampEggVelocity.text)
