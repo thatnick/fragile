@@ -126,19 +126,11 @@ text = "GAMEPLAY OPTIONS"
 align = 1
 valign = 1
 
-[node name="Label4" type="Label" parent="."]
-margin_left = 248.0
-margin_top = 408.0
-margin_right = 412.0
-margin_bottom = 432.0
-text = "Egg lay interval (>=1 secs)"
-valign = 1
-
 [node name="Label7" type="Label" parent="."]
-margin_left = 240.0
-margin_top = 472.0
-margin_right = 410.0
-margin_bottom = 496.0
+margin_left = 256.0
+margin_top = 416.0
+margin_right = 426.0
+margin_bottom = 440.0
 text = "Bird speed (pixels per sec)"
 valign = 1
 
@@ -150,17 +142,11 @@ margin_bottom = 544.0
 text = "Select level"
 valign = 1
 
-[node name="EggIntervalEdit" type="LineEdit" parent="."]
-margin_left = 416.0
-margin_top = 408.0
-margin_right = 474.0
-margin_bottom = 432.0
-
 [node name="BirdSpeedEdit" type="LineEdit" parent="."]
-margin_left = 416.0
-margin_top = 472.0
-margin_right = 474.0
-margin_bottom = 496.0
+margin_left = 436.0
+margin_top = 416.0
+margin_right = 494.0
+margin_bottom = 440.0
 
 [node name="LvlOptionButton" type="OptionButton" parent="."]
 margin_left = 176.0

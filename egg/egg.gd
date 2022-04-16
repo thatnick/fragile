@@ -2,7 +2,7 @@ class_name Egg
 extends RigidBody2D
 
 const CHICK = preload("res://chick/chick.tscn")
-const SCORE_VALUE: int = 1
+const SCORE_VALUE: int = 10
 
 var hatched = false
 var splatted = false

@@ -13,7 +13,6 @@ func _ready():
 	$EggsCollide.pressed = manager.eggs_collide
 	
 	# gamelplay options
-	$EggIntervalEdit.text = str(manager.egg_interval)
 	$BirdSpeedEdit.text = str(manager.bird_speed)
 	
 	for level_file_path in manager.level_file_paths:
@@ -26,7 +25,6 @@ func _on_StartGameButton_pressed():
 	manager.rot_vel_damp = float($RotVelDampEdit.text)
 	manager.clamp_egg_velocity = float($ClampEggVelocity.text)
 	manager.eggs_collide = $EggsCollide.pressed
-	manager.egg_interval = int($EggIntervalEdit.text)
 	manager.bird_speed = float($BirdSpeedEdit.text)
 
 	manager.load_level($LvlOptionButton.get_item_text($LvlOptionButton.get_selected_id()))
