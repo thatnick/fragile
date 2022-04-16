@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://fonts/PressStart2P-Regular.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://game/hud.gd" type="Script" id=2]
@@ -33,9 +33,6 @@ corner_radius_bottom_right = 30
 corner_radius_bottom_left = 30
 
 [sub_resource type="DynamicFont" id=6]
-font_data = ExtResource( 1 )
-
-[sub_resource type="DynamicFont" id=7]
 font_data = ExtResource( 1 )
 
 [node name="HUD" type="CanvasLayer"]
@@ -93,28 +90,4 @@ margin_top = 20.0
 margin_right = 616.0
 margin_bottom = 36.0
 custom_fonts/font = SubResource( 6 )
-text = "Lives:"
-
-[node name="CurrentLivesLabel" type="Label" parent="."]
-margin_left = 650.0
-margin_top = 20.0
-margin_right = 670.0
-margin_bottom = 36.0
-custom_fonts/font = SubResource( 7 )
-text = "#"
-
-[node name="LivesSlash" type="Label" parent="."]
-margin_left = 681.0
-margin_top = 20.0
-margin_right = 697.0
-margin_bottom = 36.0
-custom_fonts/font = SubResource( 8 )
-text = "/"
-
-[node name="TotalLivesLabel" type="Label" parent="."]
-margin_left = 712.0
-margin_top = 19.0
-margin_right = 731.0
-margin_bottom = 35.0
-custom_fonts/font = SubResource( 9 )
-text = "#"
+text = "Timer:"
