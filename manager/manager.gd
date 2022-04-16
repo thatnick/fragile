@@ -40,6 +40,7 @@ func new_game():
 	get_tree().change_scene("res://screens/debug_options.tscn")
 
 func level_complete():
+	# TODO fix crash on completing final level
 	lvl += 1
 	get_tree().change_scene("res://screens/level_complete.tscn")
 
