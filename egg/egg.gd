@@ -2,6 +2,7 @@ class_name Egg
 extends RigidBody2D
 
 const CHICK = preload("res://chick/chick.tscn")
+const SCORE_VALUE: int = 1
 
 var hatched = false
 var splatted = false
@@ -54,6 +55,7 @@ func hit_floor():
 	
 func hatch():
 	hatched = true
+	get_tree().current_scene.current_score += SCORE_VALUE
 	$AnimatedSprite.animation = "hatched"
 	$Sfx.set_stream(hatch_sfx)
 	$Sfx.play()
