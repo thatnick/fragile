@@ -21,6 +21,8 @@ var level_timer = Timer.new()
 var level_end_timer = Timer.new()
 var time_left
 
+var level_complete = false
+
 func _ready():
 	calc_target_score()
 	setup_timers()
@@ -29,7 +31,8 @@ func _ready():
 
 func _process(_delta):
 	time_left = int(level_timer.time_left)
-	if current_score >= target_score:
+	if !level_complete && current_score >= target_score:
+		level_complete = true
 		level_complete()
 		
 	# DEBUG
