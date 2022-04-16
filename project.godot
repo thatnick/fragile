@@ -54,11 +54,6 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://nest/nest_hen.gd"
 }, {
-"base": "Control",
-"class": "Start",
-"language": "GDScript",
-"path": "res://screens/start.gd"
-}, {
 "base": "StaticBody2D",
 "class": "Wall",
 "language": "GDScript",
@@ -74,14 +69,13 @@ _global_script_class_icons={
 "Lvl": "",
 "Nest": "",
 "NestHen": "",
-"Start": "",
 "Wall": ""
 }
 
 [application]
 
 config/name="fragile"
-run/main_scene="res://screens/debug_options.tscn"
+run/main_scene="res://screens/start.tscn"
 
 [autoload]
 
