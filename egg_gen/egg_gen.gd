@@ -34,7 +34,7 @@ func _on_BombSpawnTimer_timeout():
 func spawn_bomb():
 	var bomb = BOMB.instance()
 	bomb.position = $Bird.position
-	game_scene.add_child(bomb)
+	manager.get_current_level_scene().add_child(bomb)
 
 func spawn_egg():
 	var egg = EGG.instance()
