@@ -100,6 +100,7 @@ layer=false
 2d_physics/layer_8="player_floor"
 2d_physics/layer_9="balloon"
 2d_physics/layer_10="bomb"
+2d_physics/layer_11="chick"
 
 [physics]
 
