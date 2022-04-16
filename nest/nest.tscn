@@ -1,20 +1,15 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://nest/nest.gd" type="Script" id=1]
 [ext_resource path="res://nest/sprites/nest_front.png" type="Texture" id=3]
 [ext_resource path="res://nest/sprites/nest_back.png" type="Texture" id=4]
 
-[sub_resource type="PhysicsMaterial" id=2]
-bounce = 0.5
-absorbent = true
-
 [sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 2, 29 )
 
-[node name="Nest" type="StaticBody2D"]
+[node name="Nest" type="KinematicBody2D"]
 collision_layer = 16
-collision_mask = 2
-physics_material_override = SubResource( 2 )
+collision_mask = 138
 script = ExtResource( 1 )
 
 [node name="NestBack" type="Sprite" parent="."]

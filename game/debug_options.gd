@@ -14,7 +14,6 @@ func _ready():
 	
 	# gamelplay options
 	$EggIntervalEdit.text = str(manager.egg_interval)
-	$LivesEdit.text = str(manager.lives_total)
 	$BirdSpeedEdit.text = str(manager.bird_speed)
 	
 	for level_file_path in manager.level_file_paths:
@@ -28,7 +27,6 @@ func _on_StartGameButton_pressed():
 	manager.clamp_egg_velocity = float($ClampEggVelocity.text)
 	manager.eggs_collide = $EggsCollide.pressed
 	manager.egg_interval = int($EggIntervalEdit.text)
-	manager.lives_total = int($LivesEdit.text)
 	manager.bird_speed = float($BirdSpeedEdit.text)
 
 	manager.load_level($LvlOptionButton.get_item_text($LvlOptionButton.get_selected_id()))
