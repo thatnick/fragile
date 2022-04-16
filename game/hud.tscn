@@ -1,7 +1,8 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://fonts/PressStart2P-Regular.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://game/hud.gd" type="Script" id=2]
+[ext_resource path="res://fonts/font.tres" type="DynamicFont" id=3]
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0, 0, 0, 0.380392 )
@@ -9,12 +10,6 @@ corner_radius_top_left = 30
 corner_radius_top_right = 30
 corner_radius_bottom_right = 30
 corner_radius_bottom_left = 30
-
-[sub_resource type="DynamicFontData" id=3]
-font_path = "res://fonts/PressStart2P-Regular.ttf"
-
-[sub_resource type="DynamicFont" id=4]
-font_data = SubResource( 3 )
 
 [sub_resource type="DynamicFont" id=5]
 font_data = ExtResource( 1 )
@@ -50,7 +45,7 @@ margin_left = 16.0
 margin_top = 19.0
 margin_right = 112.0
 margin_bottom = 39.0
-custom_fonts/font = SubResource( 4 )
+custom_fonts/font = ExtResource( 3 )
 text = "Score:"
 
 [node name="CurrentScoreLabel" type="Label" parent="."]
