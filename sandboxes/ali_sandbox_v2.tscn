@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://game/wall.tscn" type="PackedScene" id=1]
 [ext_resource path="res://game/floor.tscn" type="PackedScene" id=2]
+[ext_resource path="res://chick/chick.tscn" type="PackedScene" id=3]
 [ext_resource path="res://bomb/bomb.tscn" type="PackedScene" id=4]
 [ext_resource path="res://game/ceiling.tscn" type="PackedScene" id=5]
 [ext_resource path="res://cloud/moving_cloud.tscn" type="PackedScene" id=6]
@@ -31,7 +32,7 @@ position = Vector2( 74, 94 )
 position = Vector2( 83, 454 )
 
 [node name="StaticCloud" parent="." instance=ExtResource( 7 )]
-position = Vector2( 387, 167 )
+position = Vector2( 495, 184 )
 
 [node name="StaticCloud2" parent="." instance=ExtResource( 7 )]
 position = Vector2( 215, 345 )
@@ -47,3 +48,12 @@ position = Vector2( 680, 307 )
 
 [node name="Ceiling" parent="." instance=ExtResource( 5 )]
 position = Vector2( 3, 1 )
+
+[node name="Chick" parent="." instance=ExtResource( 3 )]
+position = Vector2( 308, 565 )
+
+[node name="Chick2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 342, 567 )
+
+[node name="Chick3" parent="." instance=ExtResource( 3 )]
+position = Vector2( 373, 564 )
