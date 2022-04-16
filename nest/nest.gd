@@ -14,6 +14,6 @@ func get_input():
 	if Input.is_action_pressed("ui_left"):
 		velocity.x -= SPEED
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	get_input()
 	velocity = move_and_slide(velocity, Vector2(0, -1))
