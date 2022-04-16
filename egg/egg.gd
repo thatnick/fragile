@@ -42,7 +42,6 @@ func disable_collide():
 
 func hit_floor():
 	splatted = true
-	$HatchTimer.stop()
 	$AnimatedSprite.animation = "splat"
 	$Sfx.set_stream(splat_sfx)
 	$Sfx.play()
