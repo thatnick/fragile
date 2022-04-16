@@ -15,14 +15,14 @@ radius = 29.0689
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 2 ) ],
-"loop": true,
-"name": "sitting",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 5 ), ExtResource( 2 ) ],
 "loop": true,
 "name": "hitting",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 2 ) ],
+"loop": true,
+"name": "sitting",
 "speed": 5.0
 } ]
 
@@ -52,7 +52,6 @@ script = ExtResource( 6 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NestHen"]
 shape = SubResource( 2 )
-one_way_collision = true
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="NestHen"]
 position = Vector2( -1, -11 )
