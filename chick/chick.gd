@@ -1,10 +1,6 @@
-extends Node2D
+extends RigidBody2D
 
 const SPEED = 100
 
-func _process(delta):
-	var velocity = Vector2(0, -1) * SPEED
-	position += velocity * delta
-
-func _on_VisibilityNotifier2D_screen_exited():
-	queue_free()
+func _ready():
+	apply_central_impulse(Vector2(0, -1) * SPEED)
