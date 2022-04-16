@@ -39,4 +39,9 @@ wait_time = 5.0
 [node name="Sfx" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 3 )
 
+[node name="BombSpawnTimer" type="Timer" parent="."]
+wait_time = 5.0
+autostart = true
+
 [connection signal="timeout" from="EggSpawnTimer" to="." method="_on_EggSpawnTimer_timeout"]
+[connection signal="timeout" from="BombSpawnTimer" to="." method="_on_BombSpawnTimer_timeout"]

@@ -1,6 +1,7 @@
 extends Path2D
 
 const EGG = preload("res://egg/egg.tscn")
+const BOMB = preload("res://bomb/bomb.tscn")
 
 var speed = 250
 
@@ -28,8 +29,21 @@ func _process(delta):
 func _on_EggSpawnTimer_timeout():
 	spawn_egg()
 
+func _on_BombSpawnTimer_timeout():
+	spawn_bomb()
+
+func spawn_bomb():
+	var bomb = BOMB.instance()
+	bomb.position = $Bird.position
+	game_scene.add_child(bomb)
+
 func spawn_egg():
 	var egg = EGG.instance()
 	egg.position = $Bird.position
 	game_scene.add_child(egg)
 	$Sfx.play()
+
+
+
+
+
