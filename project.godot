@@ -59,11 +59,6 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://pop_up_score/pop_up_score.gd"
 }, {
-"base": "Control",
-"class": "Start",
-"language": "GDScript",
-"path": "res://screens/start.gd"
-}, {
 "base": "StaticBody2D",
 "class": "Wall",
 "language": "GDScript",
@@ -80,7 +75,6 @@ _global_script_class_icons={
 "Nest": "",
 "NestHen": "",
 "PopUpScore": "",
-"Start": "",
 "Wall": ""
 }
 
