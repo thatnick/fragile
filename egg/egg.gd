@@ -36,6 +36,9 @@ func _on_Egg_body_entered(body):
 	elif body is Nest:
 		hatch()
 
+func _on_DeleteShellTimer_timeout():
+	queue_free()
+
 func disable_collide():
 	$EggShapeTop.set_deferred("disabled", true)
 	$EggShapeBottom.set_deferred("disabled", true)
@@ -56,6 +59,7 @@ func hatch():
 	$Sfx.play()
 	spawn_chick()
 	disable_collide()
+	$DeleteShellTimer.start()
 
 func make_static():
 	set_deferred("mode", MODE_STATIC)
