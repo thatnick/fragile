@@ -10,6 +10,7 @@ func _ready():
 	
 func _process(_delta):
 	$CurrentScoreLabel.text = str(manager.get_current_level_scene().current_score)
+	$TimeLeftLabel.text = str(manager.get_current_level_scene().time_left)
 
 func _on_level_ready():
 	$TargetScoreLabel.text = str(manager.get_current_level_scene().target_score)

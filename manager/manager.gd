@@ -27,7 +27,7 @@ func _ready():
 
 #TODO - function to progress to next level
 func next_level():
-	load_level(get_next_level_file_path())
+	load_level(get_level_file_path())
 
 func load_level(lvl_path):
 	get_tree().change_scene(lvl_path)
@@ -35,26 +35,27 @@ func load_level(lvl_path):
 #TODO - function to set up game to play from start
 func new_game():
 	set_level(1)
-	next_level()
+	# DEBUG
+	#next_level()
+	get_tree().change_scene("res://screens/debug_options.tscn")
 
 func level_complete():
-	pass
+	lvl += 1
+	get_tree().change_scene("res://screens/level_complete.tscn")
+
+func level_failed():
+	get_tree().change_scene("res://screens/level_failed.tscn")
+
+func retry_level():
+	next_level()
 
 func game_complete():
-	pass
-
-func level_fail():
-	pass
-
+	get_tree().change_scene("res://screens/game_complete.tscn")
+	
 func game_over():
 	get_tree().change_scene("res://screens/game_over.tscn")
 
-#TODO - function to retry the existing level
-func retry():
-	print("Retry method was called!")
-
-#Function to return player to start screen
-func start_screen():
+func restart_game():
 	get_tree().change_scene("res://screens/start.tscn")
 	
 func init_level_paths():
@@ -68,7 +69,7 @@ func init_level_paths():
 			file_name = dir.get_next()
 	level_file_paths.sort()
 
-func get_next_level_file_path():
+func get_level_file_path():
 	return level_file_paths[lvl - 1]
 
 func get_current_level_scene():
@@ -76,7 +77,7 @@ func get_current_level_scene():
 
 func set_level(new_value):
 	if new_value > level_file_paths.size():
-		lvl = 1
+		game_complete()
 	else:
 		lvl = new_value
 

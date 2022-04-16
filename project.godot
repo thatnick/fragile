@@ -87,7 +87,7 @@ _global_script_class_icons={
 [application]
 
 config/name="fragile"
-run/main_scene="res://screens/debug_options.tscn"
+run/main_scene="res://screens/start.tscn"
 
 [autoload]
 

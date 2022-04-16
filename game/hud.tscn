@@ -1,7 +1,8 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://fonts/PressStart2P-Regular.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://game/hud.gd" type="Script" id=2]
+[ext_resource path="res://fonts/font.tres" type="DynamicFont" id=3]
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0, 0, 0, 0.380392 )
@@ -9,12 +10,6 @@ corner_radius_top_left = 30
 corner_radius_top_right = 30
 corner_radius_bottom_right = 30
 corner_radius_bottom_left = 30
-
-[sub_resource type="DynamicFontData" id=3]
-font_path = "res://fonts/PressStart2P-Regular.ttf"
-
-[sub_resource type="DynamicFont" id=4]
-font_data = SubResource( 3 )
 
 [sub_resource type="DynamicFont" id=5]
 font_data = ExtResource( 1 )
@@ -41,7 +36,7 @@ script = ExtResource( 2 )
 [node name="Score" type="Panel" parent="."]
 margin_left = 7.0
 margin_top = 8.0
-margin_right = 232.0
+margin_right = 224.0
 margin_bottom = 48.0
 custom_styles/panel = SubResource( 1 )
 
@@ -50,44 +45,62 @@ margin_left = 16.0
 margin_top = 19.0
 margin_right = 112.0
 margin_bottom = 39.0
-custom_fonts/font = SubResource( 4 )
+custom_fonts/font = ExtResource( 3 )
 text = "Score:"
 
 [node name="CurrentScoreLabel" type="Label" parent="."]
 margin_left = 120.0
 margin_top = 19.0
-margin_right = 177.0
+margin_right = 152.0
 margin_bottom = 41.0
 custom_fonts/font = SubResource( 5 )
-text = "#"
+text = "##"
+align = 2
 
 [node name="ScoreSlash" type="Label" parent="."]
-margin_left = 152.0
-margin_top = 20.0
-margin_right = 168.0
-margin_bottom = 36.0
+margin_left = 160.0
+margin_top = 19.0
+margin_right = 176.0
+margin_bottom = 35.0
 custom_fonts/font = SubResource( 8 )
 text = "/"
 
 [node name="TargetScoreLabel" type="Label" parent="."]
 margin_left = 184.0
-margin_top = 20.0
+margin_top = 19.0
 margin_right = 203.0
-margin_bottom = 36.0
+margin_bottom = 35.0
 custom_fonts/font = SubResource( 9 )
-text = "#"
+text = "##"
 
-[node name="Lives" type="Panel" parent="."]
-margin_left = 504.0
+[node name="Timer" type="Panel" parent="."]
+margin_left = 560.0
 margin_top = 8.0
 margin_right = 791.0
 margin_bottom = 48.0
 custom_styles/panel = SubResource( 2 )
 
-[node name="LivesText" type="Label" parent="."]
-margin_left = 520.0
+[node name="TimerText" type="Label" parent="."]
+margin_left = 568.0
 margin_top = 20.0
-margin_right = 616.0
+margin_right = 664.0
 margin_bottom = 36.0
 custom_fonts/font = SubResource( 6 )
 text = "Timer:"
+
+[node name="TimeLeftLabel" type="Label" parent="."]
+margin_left = 672.0
+margin_top = 20.0
+margin_right = 712.0
+margin_bottom = 36.0
+custom_fonts/font = SubResource( 6 )
+text = "##"
+align = 2
+
+[node name="SecsLabel" type="Label" parent="."]
+margin_left = 720.0
+margin_top = 20.0
+margin_right = 784.0
+margin_bottom = 36.0
+custom_fonts/font = SubResource( 6 )
+text = "secs"
