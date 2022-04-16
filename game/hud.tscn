@@ -77,17 +77,32 @@ margin_bottom = 36.0
 custom_fonts/font = SubResource( 9 )
 text = "#"
 
-[node name="Lives" type="Panel" parent="."]
+[node name="Timer" type="Panel" parent="."]
 margin_left = 504.0
 margin_top = 8.0
 margin_right = 791.0
 margin_bottom = 48.0
 custom_styles/panel = SubResource( 2 )
 
-[node name="LivesText" type="Label" parent="."]
+[node name="TimerText" type="Label" parent="."]
 margin_left = 520.0
 margin_top = 20.0
 margin_right = 616.0
 margin_bottom = 36.0
 custom_fonts/font = SubResource( 6 )
 text = "Timer:"
+
+[node name="TimeLeftLabel" type="Label" parent="."]
+margin_left = 624.0
+margin_top = 19.0
+margin_right = 704.0
+margin_bottom = 35.0
+custom_fonts/font = SubResource( 6 )
+
+[node name="SecsLabel" type="Label" parent="."]
+margin_left = 704.0
+margin_top = 20.0
+margin_right = 784.0
+margin_bottom = 36.0
+custom_fonts/font = SubResource( 6 )
+text = "secs"

@@ -27,6 +27,7 @@ func _ready():
 
 #TODO - function to progress to next level
 func next_level():
+	yield(get_tree().create_timer(3.0), "timeout")
 	load_level(get_next_level_file_path())
 
 func load_level(lvl_path):
@@ -38,13 +39,15 @@ func new_game():
 	next_level()
 
 func level_complete():
-	pass
+	lvl += 1
+	get_tree().change_scene("res://screens/next_level.tscn")
 
 func game_complete():
 	pass
 
-func level_fail():
-	pass
+func level_failed():
+	# TODO goto a new screen allowing level retry
+	get_tree().change_scene("res://screens/game_over.tscn")
 
 func game_over():
 	get_tree().change_scene("res://screens/game_over.tscn")
