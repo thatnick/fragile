@@ -36,7 +36,7 @@ script = ExtResource( 2 )
 [node name="Score" type="Panel" parent="."]
 margin_left = 7.0
 margin_top = 8.0
-margin_right = 232.0
+margin_right = 224.0
 margin_bottom = 48.0
 custom_styles/panel = SubResource( 1 )
 
@@ -51,51 +51,54 @@ text = "Score:"
 [node name="CurrentScoreLabel" type="Label" parent="."]
 margin_left = 120.0
 margin_top = 19.0
-margin_right = 177.0
+margin_right = 152.0
 margin_bottom = 41.0
 custom_fonts/font = SubResource( 5 )
-text = "#"
+text = "##"
+align = 2
 
 [node name="ScoreSlash" type="Label" parent="."]
-margin_left = 152.0
-margin_top = 20.0
-margin_right = 168.0
-margin_bottom = 36.0
+margin_left = 160.0
+margin_top = 19.0
+margin_right = 176.0
+margin_bottom = 35.0
 custom_fonts/font = SubResource( 8 )
 text = "/"
 
 [node name="TargetScoreLabel" type="Label" parent="."]
 margin_left = 184.0
-margin_top = 20.0
+margin_top = 19.0
 margin_right = 203.0
-margin_bottom = 36.0
+margin_bottom = 35.0
 custom_fonts/font = SubResource( 9 )
-text = "#"
+text = "##"
 
 [node name="Timer" type="Panel" parent="."]
-margin_left = 504.0
+margin_left = 560.0
 margin_top = 8.0
 margin_right = 791.0
 margin_bottom = 48.0
 custom_styles/panel = SubResource( 2 )
 
 [node name="TimerText" type="Label" parent="."]
-margin_left = 520.0
+margin_left = 568.0
 margin_top = 20.0
-margin_right = 616.0
+margin_right = 664.0
 margin_bottom = 36.0
 custom_fonts/font = SubResource( 6 )
 text = "Timer:"
 
 [node name="TimeLeftLabel" type="Label" parent="."]
-margin_left = 624.0
-margin_top = 19.0
-margin_right = 704.0
-margin_bottom = 35.0
+margin_left = 672.0
+margin_top = 20.0
+margin_right = 712.0
+margin_bottom = 36.0
 custom_fonts/font = SubResource( 6 )
+text = "##"
+align = 2
 
 [node name="SecsLabel" type="Label" parent="."]
-margin_left = 704.0
+margin_left = 720.0
 margin_top = 20.0
 margin_right = 784.0
 margin_bottom = 36.0
