@@ -2,6 +2,7 @@ class_name Egg
 extends RigidBody2D
 
 const CHICK = preload("res://chick/chick.tscn")
+const POP_UP_SCORE = preload("res://pop_up_score/pop_up_score.tscn")
 const SCORE_VALUE: int = 10
 
 var hatched = false
@@ -55,7 +56,7 @@ func hit_floor():
 	
 func hatch():
 	hatched = true
-	get_tree().current_scene.current_score += SCORE_VALUE
+	score()
 	$AnimatedSprite.animation = "hatched"
 	$Sfx.set_stream(hatch_sfx)
 	$Sfx.play()
@@ -70,3 +71,10 @@ func spawn_chick():
 	var chick = CHICK.instance()
 	chick.position = position
 	game_scene.call_deferred("add_child", chick)
+
+func score():
+	get_tree().current_scene.current_score += SCORE_VALUE
+	var pop_up_score = POP_UP_SCORE.instance()
+	pop_up_score.set_position(position)
+	game_scene.call_deferred("add_child", pop_up_score)
+	pop_up_score.call_deferred("start", -1, 50, "+" + str(SCORE_VALUE))
