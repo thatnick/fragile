@@ -11,8 +11,10 @@ func get_input():
 	velocity.x = 0;
 	if Input.is_action_pressed("ui_right"):
 		velocity.x += SPEED
+		$NestHen/AnimatedSprite.set_flip_h(true)
 	if Input.is_action_pressed("ui_left"):
 		velocity.x -= SPEED
+		$NestHen/AnimatedSprite.set_flip_h(false)
 
 func _physics_process(_delta):
 	get_input()

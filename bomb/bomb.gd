@@ -23,7 +23,9 @@ func _physics_process(delta):
 				hit_floor()
 			else:
 				velocity = velocity.bounce(collision.normal)
-		pass
+			
+			if collision.collider is NestHen:
+				collision.collider.bat_away()
 	
 
 func explode():

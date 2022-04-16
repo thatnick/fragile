@@ -12,6 +12,16 @@ bounce = 1.0
 
 [sub_resource type="SpriteFrames" id=5]
 animations = [ {
+"frames": [ ExtResource( 2 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 3 ) ],
+"loop": true,
+"name": "hatched",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 5 ) ],
 "loop": true,
 "name": "v_cracked",
@@ -25,16 +35,6 @@ animations = [ {
 "frames": [ ExtResource( 4 ) ],
 "loop": true,
 "name": "cracked",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 2 ) ],
-"loop": true,
-"name": "default",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 3 ) ],
-"loop": true,
-"name": "hatched",
 "speed": 5.0
 } ]
 
