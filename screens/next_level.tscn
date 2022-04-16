@@ -10,16 +10,21 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -64.5
-margin_top = -15.5
-margin_right = 64.5
-margin_bottom = 15.5
-text = "Level complete
-Next level starting..."
+margin_left = -52.5
+margin_top = -9.5
+margin_right = 52.5
+margin_bottom = 9.5
+text = "Level complete"
 
-[node name="NextLevelTimer" type="Timer" parent="."]
-wait_time = 3.0
-one_shot = true
-autostart = true
+[node name="NextLevelButton" type="Button" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -38.5
+margin_top = 17.0
+margin_right = 38.5
+margin_bottom = 37.0
+text = "Next level"
 
-[connection signal="timeout" from="NextLevelTimer" to="." method="_on_NextLevelTimer_timeout"]
+[connection signal="pressed" from="NextLevelButton" to="." method="_on_NextLevelButton_pressed"]
