@@ -5,7 +5,6 @@ const EGG = preload("res://egg/egg.tscn")
 var speed = 250
 
 onready var manager = get_node("/root/Manager")
-onready var game_scene = get_parent()
 
 func _ready():
 	# stop at the end of the path instead of looping back to the start
@@ -14,7 +13,7 @@ func _ready():
 	speed = manager.bird_speed
 	
 	# DEBUG Set options from the debug screen
-	$EggSpawnTimer.wait_time = manager.egg_interval
+	$EggSpawnTimer.wait_time = manager.get_current_level_scene().egg_lay_interval
 	$EggSpawnTimer.start()
 
 func _process(delta):
@@ -31,5 +30,5 @@ func _on_EggSpawnTimer_timeout():
 func spawn_egg():
 	var egg = EGG.instance()
 	egg.position = $Bird.position
-	game_scene.add_child(egg)
+	manager.get_current_level_scene().add_child(egg)
 	$Sfx.play()

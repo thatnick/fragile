@@ -2,11 +2,13 @@
 
 extends Node
 
-var level_running = false
+signal level_ready
+
+var level_running = false setget set_level_running
+var current
 
 var rng = RandomNumberGenerator.new()
 
-var score: int = 0
 var lvl = 1 setget set_level
 const LEVELS_FOLDER = "res://levels/"
 var level_file_paths = []
@@ -17,7 +19,6 @@ var fog_linear_damp = 2.0
 var gravity = 1
 var rot_vel_damp = 0.5
 var eggs_collide = false
-var egg_interval = 3
 var bird_speed = 250
 
 func _ready():
@@ -70,8 +71,15 @@ func init_level_paths():
 func get_next_level_file_path():
 	return level_file_paths[lvl - 1]
 
+func get_current_level_scene():
+	return get_tree().current_scene
+
 func set_level(new_value):
 	if new_value > level_file_paths.size():
 		lvl = 1
 	else:
 		lvl = new_value
+
+func set_level_running(new_value):
+	level_running = new_value
+	emit_signal("level_ready")
