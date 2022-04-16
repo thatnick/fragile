@@ -67,4 +67,4 @@ func make_static():
 func spawn_chick():
 	var chick = CHICK.instance()
 	chick.position = position
-	game_scene.add_child(chick)
+	game_scene.call_deferred("add_child", chick)
