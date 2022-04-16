@@ -7,7 +7,6 @@ var level_running = false
 var rng = RandomNumberGenerator.new()
 
 var score: int = 0
-var lives
 var lvl = 1 setget set_level
 const LEVELS_FOLDER = "res://levels/"
 var level_file_paths = []
@@ -19,7 +18,6 @@ var gravity = 1
 var rot_vel_damp = 0.5
 var eggs_collide = false
 var egg_interval = 3
-var lives_total = 3
 var bird_speed = 250
 
 func _ready():
@@ -32,9 +30,6 @@ func next_level():
 
 func load_level(lvl_path):
 	get_tree().change_scene(lvl_path)
-	
-	# DEBUG
-	override_level_lives()
 
 #TODO - function to set up game to play from start
 func new_game():
@@ -80,9 +75,3 @@ func set_level(new_value):
 		lvl = 1
 	else:
 		lvl = new_value
-
-# DEBUG
-func override_level_lives():
-	yield(get_tree(), "idle_frame")
-	if !lives_total == get_tree().current_scene.total_lives:
-		get_tree().current_scene.total_lives = lives_total
