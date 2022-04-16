@@ -4,4 +4,5 @@
 
 [node name="Background1" type="Sprite"]
 position = Vector2( 400, 300 )
+z_index = -10
 texture = ExtResource( 1 )
