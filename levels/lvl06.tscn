@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://game/game.tscn" type="PackedScene" id=1]
 [ext_resource path="res://cloud/moving_cloud.tscn" type="PackedScene" id=2]
+[ext_resource path="res://game/sprites/background_4.jpg" type="Texture" id=3]
 [ext_resource path="res://levels/lvl06.gd" type="Script" id=4]
 
 [node name="Lvl06" type="Node"]
@@ -19,3 +20,9 @@ initial_dir = 1
 
 [node name="MovingCloud3" parent="." instance=ExtResource( 2 )]
 position = Vector2( 400, 300 )
+
+[node name="Background4" type="Sprite" parent="."]
+position = Vector2( 400, 300 )
+scale = Vector2( 0.5, 0.5 )
+z_index = -10
+texture = ExtResource( 3 )
