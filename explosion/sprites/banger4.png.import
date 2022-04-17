@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/bang_6.png-ccfe502b1974cd86528d1d164189b52c.stex"
+path="res://.import/banger4.png-f288fc14fa3af09c434ae1dd78f880e6.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://explosion/sprites/bang_6.png"
-dest_files=[ "res://.import/bang_6.png-ccfe502b1974cd86528d1d164189b52c.stex" ]
+source_file="res://explosion/sprites/banger4.png"
+dest_files=[ "res://.import/banger4.png-f288fc14fa3af09c434ae1dd78f880e6.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

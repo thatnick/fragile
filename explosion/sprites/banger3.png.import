@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/background_3.jpg-ddd15abf17f5faaa4d07fd2134073fc8.stex"
+path="res://.import/banger3.png-af68b72e565888c134e33510e0fd7743.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://game/sprites/background_3.jpg"
-dest_files=[ "res://.import/background_3.jpg-ddd15abf17f5faaa4d07fd2134073fc8.stex" ]
+source_file="res://explosion/sprites/banger3.png"
+dest_files=[ "res://.import/banger3.png-af68b72e565888c134e33510e0fd7743.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

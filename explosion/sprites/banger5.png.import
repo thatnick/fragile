@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Effect13.png-4bdfd793226280d5c560c132c9e72d28.stex"
+path="res://.import/banger5.png-1d69ab8efc2b03098fc838b919728c5c.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://explosion/sprites/Effect13.png"
-dest_files=[ "res://.import/Effect13.png-4bdfd793226280d5c560c132c9e72d28.stex" ]
+source_file="res://explosion/sprites/banger5.png"
+dest_files=[ "res://.import/banger5.png-1d69ab8efc2b03098fc838b919728c5c.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

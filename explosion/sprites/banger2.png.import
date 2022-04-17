@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/life_ring.png-1d96958f3010de9e532f9141b1b8ad25.stex"
+path="res://.import/banger2.png-fe7f1b4437fc201150574b2e99af4b26.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://game/sprites/life_ring.png"
-dest_files=[ "res://.import/life_ring.png-1d96958f3010de9e532f9141b1b8ad25.stex" ]
+source_file="res://explosion/sprites/banger2.png"
+dest_files=[ "res://.import/banger2.png-fe7f1b4437fc201150574b2e99af4b26.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

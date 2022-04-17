@@ -1,20 +1,20 @@
 [gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://explosion/explosion.gd" type="Script" id=1]
-[ext_resource path="res://explosion/sprites/bang_1.png" type="Texture" id=2]
+[ext_resource path="res://explosion/sprites/banger3.png" type="Texture" id=2]
 [ext_resource path="res://explosion/sfx/firework.wav" type="AudioStream" id=3]
-[ext_resource path="res://explosion/sprites/bang_5.png" type="Texture" id=4]
-[ext_resource path="res://explosion/sprites/bang_2.png" type="Texture" id=5]
-[ext_resource path="res://explosion/sprites/bang_3.png" type="Texture" id=6]
-[ext_resource path="res://explosion/sprites/bang_4.png" type="Texture" id=7]
-[ext_resource path="res://explosion/sprites/bang_6.png" type="Texture" id=8]
+[ext_resource path="res://explosion/sprites/banger6.png" type="Texture" id=4]
+[ext_resource path="res://explosion/sprites/banger1.png" type="Texture" id=5]
+[ext_resource path="res://explosion/sprites/banger2.png" type="Texture" id=6]
+[ext_resource path="res://explosion/sprites/banger4.png" type="Texture" id=7]
+[ext_resource path="res://explosion/sprites/banger5.png" type="Texture" id=8]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 95.0
 
 [sub_resource type="SpriteFrames" id=6]
 animations = [ {
-"frames": [ ExtResource( 2 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 4 ), ExtResource( 8 ) ],
+"frames": [ ExtResource( 5 ), ExtResource( 6 ), ExtResource( 2 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 4 ) ],
 "loop": false,
 "name": "explosion",
 "speed": 5.0

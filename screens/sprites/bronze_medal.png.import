@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/title_screen.jpg-e07a7fd3ca4bbcc9c883f8fdaad4c55f.stex"
+path="res://.import/bronze_medal.png-3d3cd88bc89017985261a8289d47eb57.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://game/sprites/title_screen.jpg"
-dest_files=[ "res://.import/title_screen.jpg-e07a7fd3ca4bbcc9c883f8fdaad4c55f.stex" ]
+source_file="res://screens/sprites/bronze_medal.png"
+dest_files=[ "res://.import/bronze_medal.png-3d3cd88bc89017985261a8289d47eb57.stex" ]
 
 [params]
 
