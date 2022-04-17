@@ -15,7 +15,5 @@ func start(direction: int, distance: int = 12,label_text: String = "+1", color: 
 	tween.interpolate_property(self, "modulate", color, end_color, 0.3, Tween.TRANS_CIRC, Tween.EASE_IN)
 	tween.start()
 
-
 func _on_Tween_tween_all_completed():
 	queue_free()
-

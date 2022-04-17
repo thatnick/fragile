@@ -22,9 +22,7 @@ func show_story():
 	
 func new_game():
 	lvl = 1
-	# DEBUG
-	#next_level()
-	get_tree().change_scene("res://screens/debug_options.tscn")
+	next_level()
 
 func load_level(lvl_path):
 	get_tree().change_scene(lvl_path)

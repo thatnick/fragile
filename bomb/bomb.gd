@@ -27,7 +27,6 @@ func _process(delta):
 		last_four_secs = true
 		animation_player.play("modulate")
 
-
 func _physics_process(delta):
 	rotation = velocity.angle()
 	if is_moving:
@@ -62,5 +61,3 @@ func hit_floor():
 	in_air = false
 	explode()
 	is_moving = false
-
-

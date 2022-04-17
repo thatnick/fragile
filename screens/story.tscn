@@ -22,16 +22,16 @@ margin_right = 376.0
 margin_bottom = 103.0
 custom_fonts/font = ExtResource( 1 )
 text = "For reasons that seem to defy all logic, your
-partner is laying eggs in mid air as fireworks
+partner is laying eggs in mid-air as fireworks
 fall from the sky.
 
 Catch the fragile eggs with your nest to score.
 
 Block fireworks with your nest - you'll
-lose pointsif your chicks are scared by
-the bang!
+lose points if a firework hits the floor and
+scares your sleeping chicks!
 
-Control with left / right arrow keys."
+Control nest with left / right arrow keys."
 
 [node name="ContinueButton" type="Button" parent="."]
 anchor_left = 0.5

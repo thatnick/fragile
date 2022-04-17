@@ -31,10 +31,6 @@ func _ready():
 
 func _process(_delta):
 	time_left = int(level_timer.time_left)
-		
-	# DEBUG
-	if Input.is_action_pressed("ui_cancel"):
-		get_tree().change_scene("res://screens/debug_options.tscn")
 
 func _exit_tree():
 	manager.level_running = false
