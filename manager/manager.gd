@@ -14,6 +14,7 @@ var level_file_paths = []
 
 var last_level_score = 0
 var scores = []
+var total_score = 0
 
 func _ready():
 	pause_mode = Node.PAUSE_MODE_PROCESS
@@ -49,6 +50,8 @@ func restart_game():
 	get_tree().change_scene("res://screens/start.tscn")
 
 func game_complete():
+	for score in scores:
+		total_score += score
 	get_tree().change_scene("res://screens/game_complete.tscn")
 	
 func init_level_paths():
