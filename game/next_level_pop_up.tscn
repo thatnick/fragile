@@ -1,14 +1,29 @@
-[gd_scene format=2]
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://fonts/font.tres" type="DynamicFont" id=1]
+[ext_resource path="res://styles/button_normal_style.tres" type="StyleBox" id=2]
 
 [node name="NextLevelPopUp" type="CanvasLayer"]
 
-[node name="Label" type="Label" parent="."]
-anchor_left = 0.5
+[node name="Panel" type="Panel" parent="."]
+anchor_left = 0.521
 anchor_top = 0.5
-anchor_right = 0.5
+anchor_right = 0.521
 anchor_bottom = 0.5
-margin_left = -33.0
-margin_top = -7.0
-margin_right = 33.0
-margin_bottom = 7.0
+margin_left = -174.8
+margin_top = -58.0
+margin_right = 175.2
+margin_bottom = 61.0
+custom_styles/panel = ExtResource( 2 )
+
+[node name="Label" type="Label" parent="Panel"]
+anchor_left = 0.429
+anchor_top = 0.5
+anchor_right = 0.429
+anchor_bottom = 0.5
+margin_left = -126.15
+margin_top = -12.5
+margin_right = 173.85
+margin_bottom = 17.5
+custom_fonts/font = ExtResource( 1 )
 text = "Time's up!"

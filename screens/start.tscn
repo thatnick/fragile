@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://screens/start.gd" type="Script" id=1]
 [ext_resource path="res://screens/sprites/title_screen.jpg" type="Texture" id=2]
-[ext_resource path="res://fonts/font.tres" type="DynamicFont" id=3]
+[ext_resource path="res://fonts/button_font.tres" type="DynamicFont" id=3]
+[ext_resource path="res://styles/button_hover_style.tres" type="StyleBox" id=4]
+[ext_resource path="res://styles/button_normal_style.tres" type="StyleBox" id=5]
 
 [node name="Start" type="CanvasLayer"]
 script = ExtResource( 1 )
@@ -16,11 +18,13 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -84.0
-margin_top = -16.0
-margin_right = 84.0
-margin_bottom = 16.0
+margin_left = -143.0
+margin_top = -34.0
+margin_right = 143.0
+margin_bottom = 44.0
 custom_fonts/font = ExtResource( 3 )
+custom_styles/hover = ExtResource( 4 )
+custom_styles/normal = ExtResource( 5 )
 text = "New Game"
 
 [connection signal="pressed" from="NewGameButton" to="." method="_on_NewGameButton_pressed"]
