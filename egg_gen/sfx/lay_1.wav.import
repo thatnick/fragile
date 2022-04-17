@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/lay_1.wav-70bb9dd85443ba54dc7a7372cc3be568.sample"
+
+[deps]
+
+source_file="res://egg_gen/sfx/lay_1.wav"
+dest_files=[ "res://.import/lay_1.wav-70bb9dd85443ba54dc7a7372cc3be568.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
