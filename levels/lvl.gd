@@ -11,7 +11,7 @@ const SILVER_SCORE_PERCENT = 50
 const BRONZE_SCORE_PERCENT = 25
 const SCORE_MULTIPLIER = 10
 
-var time_limit_secs = 30
+var time_limit_secs = 60
 var egg_lay_interval = 3
 var bomb_drop_interval = 5
 # For every egg dropped, there will be this many bombs dropped
