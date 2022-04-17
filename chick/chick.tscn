@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://chick/chick.gd" type="Script" id=1]
 [ext_resource path="res://chick/sprites/chick_flap_2.png" type="Texture" id=2]
@@ -9,6 +9,8 @@
 [ext_resource path="res://chick/sprites/chickrun4.png" type="Texture" id=7]
 [ext_resource path="res://chick/sprites/chickrun3.png" type="Texture" id=8]
 [ext_resource path="res://chick/sprites/chickrun1.png" type="Texture" id=9]
+[ext_resource path="res://chick/sprites/choc_bunny1.png" type="Texture" id=10]
+[ext_resource path="res://chick/sprites/choc_bunny2.png" type="Texture" id=11]
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 13, 12.5 )
@@ -28,6 +30,16 @@ animations = [ {
 "frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 2 ) ],
 "loop": true,
 "name": "flight",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 10 ), ExtResource( 11 ) ],
+"loop": true,
+"name": "bunny_flight",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 11 ) ],
+"loop": true,
+"name": "bunny_floor",
 "speed": 5.0
 } ]
 

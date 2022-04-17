@@ -16,6 +16,8 @@ var last_level_score = 0
 var scores = []
 var total_score = 0
 
+var choc_mode = false
+
 func _ready():
 	pause_mode = Node.PAUSE_MODE_PROCESS
 	rng.randomize()
@@ -25,6 +27,9 @@ func show_story():
 	get_tree().change_scene("res://screens/story.tscn")
 	
 func new_game():
+	choc_mode = false
+	scores = []
+	total_score = 0
 	lvl = 1
 	next_level()
 
@@ -41,6 +46,8 @@ func level_complete(final_score):
 	last_level_score = final_score
 	scores.push_back(final_score.actual)
 	lvl += 1
+	if lvl == level_file_paths.size():
+		choc_mode = true
 	if !lvl > level_file_paths.size():
 		get_tree().change_scene("res://screens/level_complete.tscn")
 	else:

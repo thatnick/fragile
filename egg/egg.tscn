@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://egg/egg.gd" type="Script" id=1]
 [ext_resource path="res://egg/sprites/egg_1.png" type="Texture" id=2]
@@ -6,6 +6,8 @@
 [ext_resource path="res://egg/sprites/egg_2.png" type="Texture" id=4]
 [ext_resource path="res://egg/sprites/egg_3.png" type="Texture" id=5]
 [ext_resource path="res://egg/sprites/splat.png" type="Texture" id=6]
+[ext_resource path="res://egg/sprites/easter_egg3.png" type="Texture" id=7]
+[ext_resource path="res://egg/sprites/easter_egg2a.png" type="Texture" id=8]
 
 [sub_resource type="PhysicsMaterial" id=2]
 bounce = 1.0
@@ -35,6 +37,16 @@ animations = [ {
 "frames": [ ExtResource( 3 ) ],
 "loop": true,
 "name": "hatched",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 7 ) ],
+"loop": true,
+"name": "default_bunny",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 8 ) ],
+"loop": true,
+"name": "hatched_bunny",
 "speed": 5.0
 } ]
 

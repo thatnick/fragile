@@ -10,6 +10,8 @@ var hatched = false
 var splatted = false
 var clamp_velocity = 500.0
 
+var choc_mode
+
 onready var hatch_sfx = preload("res://egg/sfx/hatch_cheep_cheep.wav")
 onready var splat_sfx = preload("res://egg/sfx/egg_splat.wav")
 
@@ -17,6 +19,9 @@ onready var manager = get_node("/root/Manager")
 onready var game_scene = get_parent()
 
 func _ready():
+	choc_mode = manager.choc_mode
+	if choc_mode:
+		$AnimatedSprite.animation = "default_bunny"
 	# add a random rotation
 	add_torque(manager.rng.randf_range(-50.0, 50.0))		
 
@@ -50,7 +55,10 @@ func hit_floor():
 func hatch():
 	hatched = true
 	score()
-	$AnimatedSprite.animation = "hatched"
+	if !choc_mode:
+		$AnimatedSprite.animation = "hatched"
+	else:
+		$AnimatedSprite.animation = "hatched_bunny"
 	$Sfx.set_stream(hatch_sfx)
 	$Sfx.play()
 	spawn_chick()
