@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/hatch_cheep_cheep.wav-823f63c83107f9c74003f3edc00bdcb9.sample"
+
+[deps]
+
+source_file="res://egg/sfx/hatch_cheep_cheep.wav"
+dest_files=[ "res://.import/hatch_cheep_cheep.wav-823f63c83107f9c74003f3edc00bdcb9.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/hit_4_sfx.wav-89566f272e7df0dd0b0bb60291c87311.sample"
+
+[deps]
+
+source_file="res://bomb/sfx/hit_4_sfx.wav"
+dest_files=[ "res://.import/hit_4_sfx.wav-89566f272e7df0dd0b0bb60291c87311.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

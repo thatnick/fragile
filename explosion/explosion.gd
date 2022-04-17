@@ -5,9 +5,9 @@ const EXPLOSION_FORCE = 150
 
 var explosion_vector = Vector2(0, -1)
 
-
 func _ready():
 	$AnimatedSprite.play("explosion")
+	$Sfx.play()
 	
 
 func _on_Explosion_body_entered(body):
