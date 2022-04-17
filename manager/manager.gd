@@ -17,6 +17,9 @@ func _ready():
 	rng.randomize()
 	init_level_paths()
 	
+func show_story():
+	get_tree().change_scene("res://screens/story.tscn")
+	
 func new_game():
 	lvl = 1
 	# DEBUG
