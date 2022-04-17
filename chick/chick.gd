@@ -2,16 +2,41 @@ class_name Chick
 extends RigidBody2D
 
 const POP_UP_SCORE = preload("res://pop_up_score/pop_up_score.tscn")
+const CHICK_HALF_WIDTH = 16
 const SPEED = 100
 const SCORE_VALUE: int = 10
+
+var first_landing = true
+var on_floor = false
+var first_landing_pos
 
 onready var game_scene = get_parent()
 
 func _ready():
 	apply_central_impulse(Vector2(0, -1) * SPEED)
 
+func _process(_delta):
+	if !first_landing && on_floor:
+		if position.x + CHICK_HALF_WIDTH < first_landing_pos.x:
+			position.x += 1
+		elif position.x - CHICK_HALF_WIDTH > first_landing_pos.x:
+			position.x -= 1
+	
+func _on_Chick_body_entered(body):
+	if body is Floor:
+		set_deferred("mode", MODE_STATIC)
+		on_floor = true
+		$AnimatedSprite.animation = "floor"
+		if first_landing:
+			first_landing = false
+			first_landing_pos = position
+	
+
 func explosion_impulse(explosion_vector: Vector2, explosion_force: int):
-	apply_central_impulse(explosion_vector * explosion_force)
+	set_deferred("mode", MODE_RIGID)
+	call_deferred("apply_central_impulse", explosion_vector * explosion_force)
+	on_floor = false
+	$AnimatedSprite.animation = "flight"
 	score()
 
 func score():
