@@ -36,7 +36,7 @@ script = ExtResource( 2 )
 [node name="Score" type="Panel" parent="."]
 margin_left = 7.0
 margin_top = 8.0
-margin_right = 224.0
+margin_right = 240.0
 margin_bottom = 48.0
 custom_styles/panel = SubResource( 1 )
 
@@ -71,7 +71,7 @@ margin_top = 19.0
 margin_right = 203.0
 margin_bottom = 35.0
 custom_fonts/font = SubResource( 9 )
-text = "##"
+text = "###"
 
 [node name="Timer" type="Panel" parent="."]
 margin_left = 560.0
