@@ -12,14 +12,6 @@ var lvl = 1
 const LEVELS_FOLDER = "res://levels/"
 var level_file_paths = []
 
-# DEBUG these are overriden by any changes on the DebugOptions screen
-var clamp_egg_velocity = 400.0
-var fog_linear_damp = 2.0
-var gravity = 1
-var rot_vel_damp = 0.5
-var eggs_collide = false
-var bird_speed = 250
-
 func _ready():
 	pause_mode = Node.PAUSE_MODE_PROCESS
 	rng.randomize()
