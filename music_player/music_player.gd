@@ -15,3 +15,7 @@ func menu_music():
 func lvl_music():
 	set_stream(loop_b)
 	play()
+
+func pause_music():
+	set_stream(loop_a)
+	play()

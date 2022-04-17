@@ -68,3 +68,4 @@ func level_complete():
 	call_deferred("add_child", pop_up)
 	get_tree().paused = true
 	level_complete_timer.start(3)
+	music_player.pause_music()
