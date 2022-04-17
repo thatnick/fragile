@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://game/game.tscn" type="PackedScene" id=1]
 [ext_resource path="res://fog/fog_cloud.tscn" type="PackedScene" id=2]
+[ext_resource path="res://cloud/static_cloud.tscn" type="PackedScene" id=3]
 [ext_resource path="res://fog/fog.tscn" type="PackedScene" id=4]
 [ext_resource path="res://levels/lvl04.gd" type="Script" id=5]
 
@@ -10,26 +11,109 @@ script = ExtResource( 5 )
 
 [node name="Game" parent="." instance=ExtResource( 1 )]
 
-[node name="Fog" parent="." instance=ExtResource( 4 )]
-position = Vector2( 603, 319 )
+[node name="Fog2" parent="." instance=ExtResource( 4 )]
+position = Vector2( 550, 250 )
 
-[node name="FogCloud" parent="Fog" instance=ExtResource( 2 )]
+[node name="FogCloud" parent="Fog2" instance=ExtResource( 2 )]
 position = Vector2( -7, -2 )
 
-[node name="FogCloud2" parent="Fog" instance=ExtResource( 2 )]
+[node name="FogCloud2" parent="Fog2" instance=ExtResource( 2 )]
 position = Vector2( 19, -4 )
 
-[node name="FogCloud3" parent="Fog" instance=ExtResource( 2 )]
+[node name="FogCloud3" parent="Fog2" instance=ExtResource( 2 )]
 position = Vector2( 30, -17 )
 
-[node name="FogCloud4" parent="Fog" instance=ExtResource( 2 )]
+[node name="FogCloud4" parent="Fog2" instance=ExtResource( 2 )]
 position = Vector2( -17, -22 )
 
-[node name="FogCloud5" parent="Fog" instance=ExtResource( 2 )]
+[node name="FogCloud5" parent="Fog2" instance=ExtResource( 2 )]
 position = Vector2( -1, -39 )
 
-[node name="FogCloud6" parent="Fog" instance=ExtResource( 2 )]
+[node name="FogCloud6" parent="Fog2" instance=ExtResource( 2 )]
 position = Vector2( 7, -19 )
 
-[node name="FogCloud7" parent="Fog" instance=ExtResource( 2 )]
+[node name="FogCloud7" parent="Fog2" instance=ExtResource( 2 )]
 position = Vector2( 24, -38 )
+
+[node name="Fog5" parent="." instance=ExtResource( 4 )]
+position = Vector2( 250, 250 )
+
+[node name="FogCloud" parent="Fog5" instance=ExtResource( 2 )]
+position = Vector2( -7, -2 )
+
+[node name="FogCloud2" parent="Fog5" instance=ExtResource( 2 )]
+position = Vector2( 19, -4 )
+
+[node name="FogCloud3" parent="Fog5" instance=ExtResource( 2 )]
+position = Vector2( 30, -17 )
+
+[node name="FogCloud4" parent="Fog5" instance=ExtResource( 2 )]
+position = Vector2( -17, -22 )
+
+[node name="FogCloud5" parent="Fog5" instance=ExtResource( 2 )]
+position = Vector2( -1, -39 )
+
+[node name="FogCloud6" parent="Fog5" instance=ExtResource( 2 )]
+position = Vector2( 7, -19 )
+
+[node name="FogCloud7" parent="Fog5" instance=ExtResource( 2 )]
+position = Vector2( 24, -38 )
+
+[node name="Fog3" parent="." instance=ExtResource( 4 )]
+position = Vector2( 250, 400 )
+initial_dir = 1
+
+[node name="FogCloud" parent="Fog3" instance=ExtResource( 2 )]
+position = Vector2( -7, -2 )
+
+[node name="FogCloud2" parent="Fog3" instance=ExtResource( 2 )]
+position = Vector2( 19, -4 )
+
+[node name="FogCloud3" parent="Fog3" instance=ExtResource( 2 )]
+position = Vector2( 30, -17 )
+
+[node name="FogCloud4" parent="Fog3" instance=ExtResource( 2 )]
+position = Vector2( -17, -22 )
+
+[node name="FogCloud5" parent="Fog3" instance=ExtResource( 2 )]
+position = Vector2( -1, -39 )
+
+[node name="FogCloud6" parent="Fog3" instance=ExtResource( 2 )]
+position = Vector2( 7, -19 )
+
+[node name="FogCloud7" parent="Fog3" instance=ExtResource( 2 )]
+position = Vector2( 24, -38 )
+
+[node name="Fog4" parent="." instance=ExtResource( 4 )]
+position = Vector2( 550, 400 )
+initial_dir = 1
+
+[node name="FogCloud" parent="Fog4" instance=ExtResource( 2 )]
+position = Vector2( -7, -2 )
+
+[node name="FogCloud2" parent="Fog4" instance=ExtResource( 2 )]
+position = Vector2( 19, -4 )
+
+[node name="FogCloud3" parent="Fog4" instance=ExtResource( 2 )]
+position = Vector2( 30, -17 )
+
+[node name="FogCloud4" parent="Fog4" instance=ExtResource( 2 )]
+position = Vector2( -17, -22 )
+
+[node name="FogCloud5" parent="Fog4" instance=ExtResource( 2 )]
+position = Vector2( -1, -39 )
+
+[node name="FogCloud6" parent="Fog4" instance=ExtResource( 2 )]
+position = Vector2( 7, -19 )
+
+[node name="FogCloud7" parent="Fog4" instance=ExtResource( 2 )]
+position = Vector2( 24, -38 )
+
+[node name="StaticCloud" parent="." instance=ExtResource( 3 )]
+position = Vector2( 100, 300 )
+
+[node name="StaticCloud2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 400, 300 )
+
+[node name="StaticCloud3" parent="." instance=ExtResource( 3 )]
+position = Vector2( 700, 300 )
