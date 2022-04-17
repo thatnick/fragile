@@ -2,6 +2,7 @@ class_name Lvl
 extends Node
 
 onready var manager = get_node("/root/Manager")
+onready var music_player = get_node("/root/MusicPlayer")
 
 const NEXT_LEVEL_POP_UP = preload("res://game/next_level_pop_up.tscn")
 const EGG_FALL_TIME_SECS = 5
@@ -60,6 +61,7 @@ func setup_timers():
 
 func start_level():
 	level_timer.start(time_limit_secs)
+	music_player.lvl_music()
 
 func level_complete():
 	var pop_up = NEXT_LEVEL_POP_UP.instance()

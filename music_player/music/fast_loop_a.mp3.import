@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/fast_loop_a.mp3-b753646a106c0bf049f94e4edef8d457.mp3str"
+
+[deps]
+
+source_file="res://music_player/music/fast_loop_a.mp3"
+dest_files=[ "res://.import/fast_loop_a.mp3-b753646a106c0bf049f94e4edef8d457.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
