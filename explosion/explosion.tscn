@@ -1,7 +1,8 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://explosion/explosion.gd" type="Script" id=1]
 [ext_resource path="res://explosion/sprites/Effect13.png" type="Texture" id=2]
+[ext_resource path="res://explosion/sfx/explosion.wav" type="AudioStream" id=3]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 95.0
@@ -42,6 +43,9 @@ shape = SubResource( 1 )
 scale = Vector2( 6.44, 6.44 )
 frames = SubResource( 6 )
 animation = "explosion"
+
+[node name="Sfx" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
 
 [connection signal="body_entered" from="." to="." method="_on_Explosion_body_entered"]
 [connection signal="animation_finished" from="AnimatedSprite" to="." method="_on_AnimatedSprite_animation_finished"]

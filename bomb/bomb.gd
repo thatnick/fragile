@@ -1,6 +1,7 @@
 class_name Bomb
 extends KinematicBody2D
 
+const BOUNCE_SFX = preload("res://bomb/sfx/hit_6.wav")
 const EXPLOSION = preload("res://explosion/explosion.tscn")
 const SPEED_MULTIPLIER = 1
 const BAT_AWAY_SPEED_MULTIPLIER = 2
@@ -13,6 +14,7 @@ var speed = SPEED_MULTIPLIER
 var velocity = Vector2()
 
 onready var game_scene = get_parent()
+onready var sfx = $Sfx
 
 func _ready():
 	velocity = gravity_vector * gravity_magnitude
@@ -27,9 +29,10 @@ func _physics_process(delta):
 				velocity = velocity.bounce(collision.normal)
 				if collision.collider is NestHen:
 					collision.collider.bat_away()
+					sfx.set_stream(BOUNCE_SFX)
+					sfx.play()
 					$BatAwayTimer.start()
 					speed = BAT_AWAY_SPEED_MULTIPLIER
-					
 
 func _on_BombTimer_timeout():
 	explode()

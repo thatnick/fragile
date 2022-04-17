@@ -10,7 +10,7 @@ var hatched = false
 var splatted = false
 var clamp_velocity = 500.0
 
-onready var hatch_sfx = preload("res://egg/sfx/hatch.wav")
+onready var hatch_sfx = preload("res://egg/sfx/hatch_cheep_cheep.wav")
 onready var splat_sfx = preload("res://egg/sfx/splat.wav")
 
 onready var manager = get_node("/root/Manager")

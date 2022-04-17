@@ -41,7 +41,6 @@ texture = ExtResource( 2 )
 position = Vector2( 42.3077, -61.5385 )
 frames = SubResource( 4 )
 animation = "fuse"
-frame = 1
 playing = true
 
 [node name="BombTimer" type="Timer" parent="."]
@@ -52,6 +51,8 @@ autostart = true
 [node name="BatAwayTimer" type="Timer" parent="."]
 wait_time = 3.0
 one_shot = true
+
+[node name="Sfx" type="AudioStreamPlayer" parent="."]
 
 [connection signal="timeout" from="BombTimer" to="." method="_on_BombTimer_timeout"]
 [connection signal="timeout" from="BatAwayTimer" to="." method="_on_BatAwayTimer_timeout"]
