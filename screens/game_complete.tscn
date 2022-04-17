@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://screens/game_complete.gd" type="Script" id=1]
 [ext_resource path="res://screens/sfx/success_noise_2.wav" type="AudioStream" id=2]
@@ -6,9 +6,14 @@
 [ext_resource path="res://styles/button_hover_style.tres" type="StyleBox" id=4]
 [ext_resource path="res://fonts/font.tres" type="DynamicFont" id=5]
 [ext_resource path="res://fonts/button_font.tres" type="DynamicFont" id=6]
+[ext_resource path="res://screens/sprites/success_screen.jpg" type="Texture" id=7]
 
 [node name="GameComplete" type="CanvasLayer"]
 script = ExtResource( 1 )
+
+[node name="SuccessScreen" type="Sprite" parent="."]
+position = Vector2( 400, 300 )
+texture = ExtResource( 7 )
 
 [node name="RestartGameButton" type="Button" parent="."]
 anchor_left = 0.5
@@ -16,9 +21,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 margin_left = -120.0
-margin_top = 47.0
+margin_top = 52.0
 margin_right = 120.0
-margin_bottom = 97.0
+margin_bottom = 102.0
 custom_fonts/font = ExtResource( 6 )
 custom_styles/hover = ExtResource( 4 )
 custom_styles/normal = ExtResource( 3 )
@@ -30,9 +35,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 margin_left = -120.0
-margin_top = -76.0
+margin_top = -100.0
 margin_right = 120.0
-margin_bottom = -46.0
+margin_bottom = -70.0
 custom_fonts/font = ExtResource( 5 )
 text = "THE END!"
 
@@ -41,10 +46,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -152.0
-margin_top = -28.0
-margin_right = 148.0
-margin_bottom = 2.0
+margin_left = -150.0
+margin_top = -15.0
+margin_right = 150.0
+margin_bottom = 15.0
 custom_fonts/font = ExtResource( 5 )
 text = "score here"
 align = 1
