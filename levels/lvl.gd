@@ -2,6 +2,7 @@ class_name Lvl
 extends Node
 
 onready var manager = get_node("/root/Manager")
+onready var music_player = get_node("/root/MusicPlayer")
 
 const EGG_FALL_TIME_SECS = 5
 const GOLD_SCORE_PERCENT = 75
@@ -57,6 +58,7 @@ func setup_timers():
 
 func start_level():
 	level_timer.start(time_limit_secs)
+	music_player.lvl_music()
 
 func level_complete():
 	level_complete_timer.start(3)

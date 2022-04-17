@@ -86,6 +86,7 @@ run/main_scene="res://screens/start.tscn"
 [autoload]
 
 Manager="*res://manager/manager.gd"
+MusicPlayer="*res://music_player/music_player.tscn"
 
 [debug]
 

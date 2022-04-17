@@ -2,6 +2,7 @@ class_name Bomb
 extends KinematicBody2D
 
 const EXPLOSION = preload("res://explosion/explosion.tscn")
+const SPEED_FACTOR = 1.1
 
 var in_air = true
 var is_moving = true
