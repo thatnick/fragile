@@ -13,7 +13,6 @@ enum Dir {LEFT = -1, RIGHT = 1}
 export(Dir) var initial_dir = Dir.LEFT
 
 func _ready():
-	set_linear_damp(manager.fog_linear_damp)
 	if mode == Mode.MOVING:
 		direction.x = initial_dir
 

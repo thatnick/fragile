@@ -10,10 +10,6 @@ onready var manager = get_node("/root/Manager")
 func _ready():
 	# stop at the end of the path instead of looping back to the start
 	$Bird.set_loop(false)
-	
-	speed = manager.bird_speed
-	
-	# DEBUG Set options from the debug screen
 	$EggSpawnTimer.wait_time = manager.get_current_level_scene().egg_lay_interval
 	$EggSpawnTimer.start()
 

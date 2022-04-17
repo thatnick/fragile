@@ -6,7 +6,7 @@
 collision_layer = 64
 collision_mask = 10
 space_override = 3
-linear_damp = 1.5
+linear_damp = 2.0
 script = ExtResource( 1 )
 
 [connection signal="body_entered" from="." to="." method="_on_Fog_body_entered"]

@@ -4,6 +4,7 @@ extends RigidBody2D
 const CHICK = preload("res://chick/chick.tscn")
 const POP_UP_SCORE = preload("res://pop_up_score/pop_up_score.tscn")
 const SCORE_VALUE: int = 10
+const VELOCITY_CLAMP = 400
 
 var hatched = false
 var splatted = false
@@ -17,20 +18,12 @@ onready var game_scene = get_parent()
 
 func _ready():
 	# add a random rotation
-	add_torque(manager.rng.randf_range(-50.0, 50.0))
-	
-	# DEBUG set debug options
-	gravity_scale = manager.gravity
-	angular_damp = manager.rot_vel_damp
-	clamp_velocity = manager.clamp_egg_velocity
-	if !manager.eggs_collide:
-		set_collision_mask(0)
-			
+	add_torque(manager.rng.randf_range(-50.0, 50.0))		
 
 func _integrate_forces(state):
 	var velocity = state.get_linear_velocity()
-	if velocity.length() > clamp_velocity:
-		state.set_linear_velocity(velocity.clamped(clamp_velocity))
+	if velocity.length() > VELOCITY_CLAMP:
+		state.set_linear_velocity(velocity.clamped(VELOCITY_CLAMP))
 
 func _on_Egg_body_entered(body):
 	if body is Floor && !hatched:
