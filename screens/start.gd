@@ -8,4 +8,4 @@ func _ready():
 	music_player.menu_music()
 
 func _on_NewGameButton_pressed():
-	manager.new_game()
+	manager.show_story()
