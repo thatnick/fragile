@@ -17,6 +17,7 @@ var scores = []
 var total_score = 0
 
 var choc_mode = false
+var game_complete = false
 
 func _ready():
 	pause_mode = Node.PAUSE_MODE_PROCESS
@@ -27,6 +28,7 @@ func show_story():
 	get_tree().change_scene("res://screens/story.tscn")
 	
 func new_game():
+	game_complete = false
 	choc_mode = false
 	scores = []
 	total_score = 0
@@ -57,9 +59,10 @@ func restart_game():
 	get_tree().change_scene("res://screens/start.tscn")
 
 func game_complete():
+	game_complete = true
 	for score in scores:
 		total_score += score
-	get_tree().change_scene("res://screens/game_complete.tscn")
+	get_tree().change_scene("res://screens/level_complete.tscn")
 	
 func init_level_paths():
 	var dir = Directory.new()
