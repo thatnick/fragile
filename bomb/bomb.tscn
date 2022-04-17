@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://bomb/bomb.gd" type="Script" id=1]
 [ext_resource path="res://bomb/sprites/firework3a.png" type="Texture" id=2]
@@ -18,6 +18,37 @@ animations = [ {
 "speed": 5.0
 } ]
 
+[sub_resource type="Animation" id=4]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("BombSprite:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "modulate"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("BombSprite:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.6, 1.1, 1.5, 1.9, 2.3, 2.6, 2.9, 3.1, 3.3, 3.4, 3.5, 3.6, 3.7, 3.8, 3.9, 4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 0, 0, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 0, 0, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 0, 0, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 0, 0, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 0, 0, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 0, 0, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 0, 0, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 0, 0, 1 ), Color( 1, 0.560784, 0, 1 ) ]
+}
+
 [node name="Bomb" type="KinematicBody2D"]
 collision_layer = 512
 collision_mask = 380
@@ -30,7 +61,6 @@ shape = SubResource( 3 )
 [node name="BombSprite" type="AnimatedSprite" parent="."]
 rotation = 1.5708
 frames = SubResource( 2 )
-frame = 2
 playing = true
 
 [node name="BombTimer" type="Timer" parent="."]
@@ -43,6 +73,10 @@ wait_time = 3.0
 one_shot = true
 
 [node name="Sfx" type="AudioStreamPlayer" parent="."]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/RESET = SubResource( 4 )
+anims/modulate = SubResource( 5 )
 
 [connection signal="timeout" from="BombTimer" to="." method="_on_BombTimer_timeout"]
 [connection signal="timeout" from="BatAwayTimer" to="." method="_on_BatAwayTimer_timeout"]

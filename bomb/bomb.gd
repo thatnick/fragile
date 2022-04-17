@@ -8,17 +8,25 @@ const BAT_AWAY_SPEED_MULTIPLIER = 2
 
 var in_air = true
 var is_moving = true
+var last_four_secs = false
 var gravity_vector = ProjectSettings.get_setting("physics/2d/default_gravity_vector")
 var gravity_magnitude = ProjectSettings.get_setting("physics/2d/default_gravity")
 var speed = SPEED_MULTIPLIER
 var velocity = Vector2()
 
 onready var game_scene = get_parent()
+onready var animation_player = $AnimationPlayer
 onready var sfx = $Sfx
 
 func _ready():
 	velocity = gravity_vector * gravity_magnitude
 	velocity = velocity.rotated(rand_range(-PI / 4, PI / 4))
+
+func _process(delta):
+	if !last_four_secs && $BombTimer.time_left <= 4:
+		last_four_secs = true
+		animation_player.play("modulate")
+
 
 func _physics_process(delta):
 	rotation = velocity.angle()
