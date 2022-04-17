@@ -1,26 +1,35 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://chick/chick.gd" type="Script" id=1]
 [ext_resource path="res://chick/sprites/chick_flap_2.png" type="Texture" id=2]
 [ext_resource path="res://chick/sprites/chick_flap_1.png" type="Texture" id=3]
 [ext_resource path="res://chick/sprites/chick_flap_3.png" type="Texture" id=4]
 [ext_resource path="res://chick/sprites/chick_flap_0.png" type="Texture" id=5]
+[ext_resource path="res://chick/sprites/chickrun2.png" type="Texture" id=6]
+[ext_resource path="res://chick/sprites/chickrun4.png" type="Texture" id=7]
+[ext_resource path="res://chick/sprites/chickrun3.png" type="Texture" id=8]
+[ext_resource path="res://chick/sprites/chickrun1.png" type="Texture" id=9]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 13, 12.5 )
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
+"frames": [ ExtResource( 5 ) ],
+"loop": true,
+"name": "floor",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 2 ) ],
 "loop": true,
 "name": "flight",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 5 ) ],
+"frames": [ ExtResource( 9 ), ExtResource( 6 ), ExtResource( 8 ), ExtResource( 7 ) ],
 "loop": true,
-"name": "floor",
-"speed": 5.0
+"name": "running",
+"speed": 7.0
 } ]
-
-[sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 13, 12.5 )
 
 [node name="Chick" type="RigidBody2D"]
 z_index = 1
@@ -30,14 +39,13 @@ contacts_reported = 1
 contact_monitor = true
 script = ExtResource( 1 )
 
-[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-frames = SubResource( 1 )
-animation = "flight"
-frame = 2
-playing = true
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 0, 0.5 )
 shape = SubResource( 2 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 1 )
+animation = "flight"
+playing = true
 
 [connection signal="body_entered" from="." to="." method="_on_Chick_body_entered"]
