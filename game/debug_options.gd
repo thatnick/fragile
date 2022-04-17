@@ -26,5 +26,6 @@ func _on_StartGameButton_pressed():
 	manager.clamp_egg_velocity = float($ClampEggVelocity.text)
 	manager.eggs_collide = $EggsCollide.pressed
 	manager.bird_speed = float($BirdSpeedEdit.text)
-
+	
+	manager.lvl = $LvlOptionButton.get_selected_id() + 1
 	manager.load_level($LvlOptionButton.get_item_text($LvlOptionButton.get_selected_id()))

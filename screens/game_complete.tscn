@@ -26,7 +26,8 @@ margin_left = -38.0
 margin_top = -7.0
 margin_right = 38.0
 margin_bottom = 7.0
-text = "GAME COMPLETED!"
+text = "GAME COMPLETED!
+TODO: GRADE OVERALL SCORE"
 
 [node name="Sfx" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 2 )

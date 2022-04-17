@@ -5,7 +5,6 @@ extends Node
 signal level_ready
 
 var level_running = false setget set_level_running
-var current
 
 var rng = RandomNumberGenerator.new()
 
@@ -24,40 +23,34 @@ var bird_speed = 250
 func _ready():
 	rng.randomize()
 	init_level_paths()
-
-#TODO - function to progress to next level
-func next_level():
-	load_level(get_level_file_path())
-
-func load_level(lvl_path):
-	get_tree().change_scene(lvl_path)
-
-#TODO - function to set up game to play from start
+	
 func new_game():
-	set_level(1)
+	lvl = 1
 	# DEBUG
 	#next_level()
 	get_tree().change_scene("res://screens/debug_options.tscn")
 
-func level_complete():
-	# TODO fix crash on completing final level
-	lvl += 1
-	get_tree().change_scene("res://screens/level_complete.tscn")
+func load_level(lvl_path):
+	get_tree().change_scene(lvl_path)
 
-func level_failed():
-	get_tree().change_scene("res://screens/level_failed.tscn")
+func next_level():
+	load_level(get_level_file_path())
 
 func retry_level():
 	next_level()
 
-func game_complete():
-	get_tree().change_scene("res://screens/game_complete.tscn")
-	
-func game_over():
-	get_tree().change_scene("res://screens/game_over.tscn")
+func level_complete():
+	lvl += 1
+	if !lvl > level_file_paths.size():
+		get_tree().change_scene("res://screens/level_complete.tscn")
+	else:
+		game_complete()
 
 func restart_game():
 	get_tree().change_scene("res://screens/start.tscn")
+
+func game_complete():
+	get_tree().change_scene("res://screens/game_complete.tscn")
 	
 func init_level_paths():
 	var dir = Directory.new()
@@ -77,10 +70,10 @@ func get_current_level_scene():
 	return get_tree().current_scene
 
 func set_level(new_value):
-	if new_value > level_file_paths.size():
-		game_complete()
-	else:
-		lvl = new_value
+	lvl = new_value
+	print("size" + str(level_file_paths.size()))
+	print("lvl" + str(lvl))
+
 
 func set_level_running(new_value):
 	level_running = new_value
