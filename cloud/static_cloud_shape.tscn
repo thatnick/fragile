@@ -3,7 +3,7 @@
 [ext_resource path="res://cloud/sprites/white_cloud.png" type="Texture" id=1]
 
 [sub_resource type="CircleShape2D" id=1]
-radius = 11.1803
+radius = 16.0
 
 [node name="WhiteCloudShape" type="CollisionShape2D"]
 shape = SubResource( 1 )
