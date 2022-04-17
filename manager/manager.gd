@@ -8,7 +8,7 @@ var level_running = false setget set_level_running
 
 var rng = RandomNumberGenerator.new()
 
-var lvl = 1 setget set_level
+var lvl = 1
 const LEVELS_FOLDER = "res://levels/"
 var level_file_paths = []
 
@@ -68,12 +68,6 @@ func get_level_file_path():
 
 func get_current_level_scene():
 	return get_tree().current_scene
-
-func set_level(new_value):
-	lvl = new_value
-	print("size" + str(level_file_paths.size()))
-	print("lvl" + str(lvl))
-
 
 func set_level_running(new_value):
 	level_running = new_value
