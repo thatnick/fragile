@@ -1,8 +1,11 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://fonts/font.tres" type="DynamicFont" id=1]
+[ext_resource path="res://fonts/button_font.tres" type="DynamicFont" id=1]
 [ext_resource path="res://screens/story.gd" type="Script" id=2]
 [ext_resource path="res://game/sprites/background_1.jpg" type="Texture" id=3]
+[ext_resource path="res://fonts/hud_font.tres" type="DynamicFont" id=4]
+[ext_resource path="res://styles/button_hover_style.tres" type="StyleBox" id=5]
+[ext_resource path="res://styles/button_normal_style.tres" type="StyleBox" id=6]
 
 [node name="CanvasLayer" type="CanvasLayer"]
 script = ExtResource( 2 )
@@ -20,7 +23,7 @@ margin_left = -376.0
 margin_top = -103.0
 margin_right = 376.0
 margin_bottom = 103.0
-custom_fonts/font = ExtResource( 1 )
+custom_fonts/font = ExtResource( 4 )
 text = "For reasons that seem to defy all logic, your
 partner is laying eggs in mid air as fireworks
 fall from the sky.
@@ -38,11 +41,13 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -72.0
-margin_top = 122.0
-margin_right = 72.0
-margin_bottom = 154.0
+margin_left = -151.0
+margin_top = 128.0
+margin_right = 146.0
+margin_bottom = 187.0
 custom_fonts/font = ExtResource( 1 )
+custom_styles/hover = ExtResource( 5 )
+custom_styles/normal = ExtResource( 6 )
 text = "Continue"
 
 [connection signal="pressed" from="ContinueButton" to="." method="_on_ContinueButton_pressed"]
