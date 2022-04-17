@@ -7,8 +7,10 @@ onready var animated_sprite = $AnimatedSprite
 const SPEED = 500
 
 var velocity = Vector2()
+var y_pos
 
 func _ready():
+	y_pos = position.y
 	animated_sprite.play("sitting")
 
 func get_input():
@@ -23,6 +25,8 @@ func get_input():
 func _physics_process(_delta):
 	get_input()
 	velocity = move_and_slide(velocity, Vector2(0, -1))
+	if position.y != y_pos:
+		position.y = y_pos
 
 func bat_away():
 	animated_sprite.play("hitting")

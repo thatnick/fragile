@@ -4,6 +4,7 @@ extends KinematicBody2D
 const SPEED = 50
 
 var direction = Vector2(1, 0)
+var y_pos
 
 onready var manager = get_node("/root/Manager")
 
@@ -14,6 +15,7 @@ enum Dir {LEFT = -1, RIGHT = 1}
 export(Dir) var initial_dir = Dir.LEFT
 
 func _ready():
+	y_pos = position.y
 	if mode == Mode.MOVING:
 		direction.x = initial_dir
 
@@ -23,3 +25,5 @@ func _physics_process(delta):
 		if collision:
 			if collision.collider is Wall:
 				direction.x = -direction.x
+	if position.y != y_pos:
+		position.y = y_pos

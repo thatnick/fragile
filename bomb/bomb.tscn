@@ -30,6 +30,7 @@ shape = SubResource( 3 )
 [node name="BombSprite" type="AnimatedSprite" parent="."]
 rotation = 1.5708
 frames = SubResource( 2 )
+frame = 1
 playing = true
 
 [node name="BombTimer" type="Timer" parent="."]
