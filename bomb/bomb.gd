@@ -17,7 +17,7 @@ func _ready():
 
 func _physics_process(delta):
 	if is_moving:
-		var collision = move_and_collide(velocity * delta)
+		var collision = move_and_collide(velocity * delta, false)
 		if collision:
 			if collision.collider is Floor:
 				hit_floor()
