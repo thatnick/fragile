@@ -50,6 +50,7 @@ margin_left = -150.0
 margin_top = -15.0
 margin_right = 150.0
 margin_bottom = 15.0
+grow_horizontal = 2
 custom_fonts/font = ExtResource( 5 )
 text = "score here"
 align = 1
