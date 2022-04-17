@@ -1,33 +1,48 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://fonts/font.tres" type="DynamicFont" id=1]
 [ext_resource path="res://screens/story.gd" type="Script" id=2]
+[ext_resource path="res://game/sprites/background_1.jpg" type="Texture" id=3]
 
 [node name="CanvasLayer" type="CanvasLayer"]
 script = ExtResource( 2 )
 
+[node name="Background1" type="Sprite" parent="."]
+position = Vector2( 400, 300 )
+texture = ExtResource( 3 )
+
 [node name="Label" type="Label" parent="."]
-margin_left = 24.0
-margin_top = 232.0
-margin_right = 776.0
-margin_bottom = 286.0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -376.0
+margin_top = -103.0
+margin_right = 376.0
+margin_bottom = 103.0
 custom_fonts/font = ExtResource( 1 )
 text = "For reasons that seem to defy all logic, your
-partner is laying eggs in mid air as bombs
+partner is laying eggs in mid air as fireworks
 fall from the sky.
 
 Catch the fragile eggs with your nest to score.
 
-Block bombs with your nest - you'll lose points
-if your chicks are scared by the bang!
+Block fireworks with your nest - you'll
+lose pointsif your chicks are scared by
+the bang!
 
 Control with left / right arrow keys."
 
 [node name="ContinueButton" type="Button" parent="."]
-margin_left = 360.0
-margin_top = 432.0
-margin_right = 429.0
-margin_bottom = 452.0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -72.0
+margin_top = 122.0
+margin_right = 72.0
+margin_bottom = 154.0
+custom_fonts/font = ExtResource( 1 )
 text = "Continue"
 
 [connection signal="pressed" from="ContinueButton" to="." method="_on_ContinueButton_pressed"]
