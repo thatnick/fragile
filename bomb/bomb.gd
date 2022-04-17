@@ -18,8 +18,10 @@ onready var sfx = $Sfx
 
 func _ready():
 	velocity = gravity_vector * gravity_magnitude
+	velocity = velocity.rotated(rand_range(-PI / 4, PI / 4))
 
 func _physics_process(delta):
+	rotation = velocity.angle()
 	if is_moving:
 		var collision = move_and_collide(velocity * speed * delta, false)
 		if collision:
@@ -27,6 +29,7 @@ func _physics_process(delta):
 				hit_floor()
 			else:
 				velocity = velocity.bounce(collision.normal)
+				rotation = velocity.angle()
 				if collision.collider is NestHen:
 					collision.collider.bat_away()
 					sfx.set_stream(BOUNCE_SFX)
