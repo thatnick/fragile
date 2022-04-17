@@ -30,7 +30,7 @@ func _physics_process(delta):
 			else:
 				velocity = velocity.bounce(collision.normal)
 				rotation = velocity.angle()
-				if collision.collider is NestHen:
+				if collision.collider is Nest:
 					collision.collider.bat_away()
 					sfx.set_stream(BOUNCE_SFX)
 					sfx.play()
