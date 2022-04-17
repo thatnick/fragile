@@ -37,8 +37,3 @@ func spawn_egg():
 	egg.position = $Bird.position
 	manager.get_current_level_scene().add_child(egg)
 	$Sfx.play()
-
-
-
-
-

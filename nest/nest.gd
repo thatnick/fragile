@@ -30,8 +30,6 @@ func _physics_process(_delta):
 
 func bat_away():
 	animated_sprite.play("hitting")
-	
 
 func _on_AnimatedSprite_animation_finished():
 	animated_sprite.play("sitting")
-	pass # Replace with function body.

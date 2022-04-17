@@ -32,8 +32,6 @@ func _on_Chick_body_entered(body):
 		if first_landing:
 			first_landing = false
 			first_landing_pos = position
-	
-
 
 func chick_run(direction: String):
 	if direction == "right":
@@ -43,8 +41,6 @@ func chick_run(direction: String):
 		position.x -= 1
 		$AnimatedSprite.flip_h = false
 	$AnimatedSprite.animation = "running"
-		
-	
 
 func explosion_impulse(explosion_vector: Vector2, explosion_force: int):
 	set_deferred("mode", MODE_RIGID)
@@ -59,4 +55,3 @@ func score():
 	pop_up_score.set_position(position)
 	game_scene.call_deferred("add_child", pop_up_score)
 	pop_up_score.call_deferred("start", -1, 50, "-" + str(SCORE_VALUE), Color.red)
-
