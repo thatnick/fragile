@@ -4,6 +4,7 @@ extends Node
 onready var manager = get_node("/root/Manager")
 onready var music_player = get_node("/root/MusicPlayer")
 
+const NEXT_LEVEL_POP_UP = preload("res://game/next_level_pop_up.tscn")
 const EGG_FALL_TIME_SECS = 5
 const GOLD_SCORE_PERCENT = 75
 const SILVER_SCORE_PERCENT = 50
@@ -42,6 +43,7 @@ func _on_level_timer_timeout():
 	level_complete()
 
 func _on_level_complete_timer_timeout():
+	get_tree().paused = false
 	manager.level_complete()
 
 func calc_target_score():
@@ -55,10 +57,14 @@ func setup_timers():
 	add_child(level_complete_timer)
 	level_timer.connect("timeout", self, "_on_level_timer_timeout")
 	level_complete_timer.connect("timeout", self, "_on_level_complete_timer_timeout")
+	level_complete_timer.pause_mode = Node.PAUSE_MODE_PROCESS
 
 func start_level():
 	level_timer.start(time_limit_secs)
 	music_player.lvl_music()
 
 func level_complete():
+	var pop_up = NEXT_LEVEL_POP_UP.instance()
+	call_deferred("add_child", pop_up)
+	get_tree().paused = true
 	level_complete_timer.start(3)

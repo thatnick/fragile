@@ -21,6 +21,7 @@ var eggs_collide = false
 var bird_speed = 250
 
 func _ready():
+	pause_mode = Node.PAUSE_MODE_PROCESS
 	rng.randomize()
 	init_level_paths()
 	

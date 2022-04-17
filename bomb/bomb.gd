@@ -2,32 +2,40 @@ class_name Bomb
 extends KinematicBody2D
 
 const EXPLOSION = preload("res://explosion/explosion.tscn")
-const SPEED_FACTOR = 1.1
+const SPEED_MULTIPLIER = 1
+const BAT_AWAY_SPEED_MULTIPLIER = 2
 
 var in_air = true
 var is_moving = true
 var gravity_vector = ProjectSettings.get_setting("physics/2d/default_gravity_vector")
 var gravity_magnitude = ProjectSettings.get_setting("physics/2d/default_gravity")
+var speed = SPEED_MULTIPLIER
 var velocity = Vector2()
 
 onready var game_scene = get_parent()
-
 
 func _ready():
 	velocity = gravity_vector * gravity_magnitude
 
 func _physics_process(delta):
 	if is_moving:
-		var collision = move_and_collide(velocity * delta)
+		var collision = move_and_collide(velocity * speed * delta, false)
 		if collision:
 			if collision.collider is Floor:
 				hit_floor()
 			else:
 				velocity = velocity.bounce(collision.normal)
-			
-			if collision.collider is NestHen:
-				collision.collider.bat_away()
-	
+				if collision.collider is NestHen:
+					collision.collider.bat_away()
+					$BatAwayTimer.start()
+					speed = BAT_AWAY_SPEED_MULTIPLIER
+					
+
+func _on_BombTimer_timeout():
+	explode()
+
+func _on_BatAwayTimer_timeout():
+	speed = SPEED_MULTIPLIER
 
 func explode():
 	var explosion = EXPLOSION.instance()
@@ -41,7 +49,4 @@ func hit_floor():
 	explode()
 	is_moving = false
 
-
-func _on_Timer_timeout():
-	explode()
 
